@@ -4,7 +4,7 @@
     $user.on('blur', function () {
         $.ajax({
             type: 'post',
-            url: 'http://localhost/Day%2019_projectname/php/registry.php',
+            url: 'http://localhost/hdf_jxwproject/php/registry.php',
             data: {
                 username: $user.val()
             }

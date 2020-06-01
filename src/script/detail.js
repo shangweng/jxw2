@@ -14,7 +14,7 @@
 
     //2.将sid传给后端
     $.ajax({
-        url: 'http://localhost/Day%2019_projectname/php/getsid.php',
+        url: 'http://localhost/hdf_jxwproject/php/getsid.php',
         data: {
             sid: $sid
         },
