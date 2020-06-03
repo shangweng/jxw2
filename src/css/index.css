@@ -299,3 +299,58 @@ body .homeMainbody .wrapper .banner .indexList .indexOn {
   background: red;
   font-weight: bold;
 }
+
+body .mainWrap {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+body .mainWrap li {
+  float: left;
+  list-style: none;
+  width: 184px;
+  height: 35px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+body .mainWrap .mainBox {
+  width: 1200px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  position: relative;
+}
+
+body .mainWrap .mainBox .contentFirst {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBox {
+  width: 920px;
+  height: 500px;
+  float: left;
+  border: 1px solid #ccc;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav {
+  width: 920px;
+  overflow: hidden;
+  height: 38px;
+  position: relative;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabMain .nav_item {
+  display: none;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBoxRight {
+  width: 270px;
+  float: right;
+  height: 500px;
+}

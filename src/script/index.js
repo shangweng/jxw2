@@ -73,5 +73,11 @@
    $(".infoList").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
    $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
  }
+ //4.tab切换
+ const $btns=$('.indexTabNav li')
+  $('').on('mouseover',function(){
+    $(this).addClass('nav_active').siblings('.indexTabNav li').removeClass('nav_active');
+    $('.indexTabMain li').eq($(this).index()).siblings('.indexTabMain li')
+  })
 
 }(jQuery);

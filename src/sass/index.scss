@@ -281,6 +281,60 @@ body{
 
 
 }
-
+//主盒子
+.mainWrap{
+    width: 100%;
+    background: #f9f9f9;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+    li{
+       float: left;
+       list-style: none;
+       width: 184px;
+       height: 35px;
+       border-bottom: 1px solid #ccc;
+       font-size: 16px; 
+  
+       text-align: center;
+   
+    }
+    .mainBox{
+        width: 1200px;
+        margin: 0 auto;
+    background: #f9f9f9;
+    position: relative;
+    //第一块
+    .contentFirst{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        //第一块左边
+        .indexTabBox{
+            width: 920px;
+            height: 500px;
+            float: left;
+            border: 1px solid #ccc;
+            .indexTabNav{width: 920px;
+                overflow: hidden;
+                height: 38px;
+                position: relative;
+            }
+            .indexTabMain{
+                .nav_item{
+                    display: none;
+                }
+            }
+           
+        }
+        //右边
+        .indexTabBoxRight{
+            width: 270px;
+            float: right;
+            height: 500px;
+        }
+    }
+    }
+}
 
 }
