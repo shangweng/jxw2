@@ -74,10 +74,13 @@
    $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
  }
  //4.tab切换
- const $btns=$('.indexTabNav li')
-  $('').on('mouseover',function(){
-    $(this).addClass('nav_active').siblings('.indexTabNav li').removeClass('nav_active');
-    $('.indexTabMain li').eq($(this).index()).siblings('.indexTabMain li')
-  })
+ $(function(){
+   const $btns=$('.indexTabNav li');
+   const $items =$('.indexTabMain .nav_item')
+   $btns.on('mouseover',function(){
+     $(this).addClass('nav_active').siblings('.indexTabNav li').removeClass('nav_active');
+     $items.eq($(this).index()).show().siblings('.indexTabMain .nav_item').hide()
+   })
+ }())
 
 }(jQuery);

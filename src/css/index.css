@@ -313,7 +313,6 @@ body .mainWrap li {
   list-style: none;
   width: 184px;
   height: 35px;
-  border-bottom: 1px solid #ccc;
   font-size: 16px;
   text-align: center;
 }
@@ -335,7 +334,6 @@ body .mainWrap .mainBox .contentFirst .indexTabBox {
   width: 920px;
   height: 500px;
   float: left;
-  border: 1px solid #ccc;
 }
 
 body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav {
@@ -345,8 +343,37 @@ body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav {
   position: relative;
 }
 
+body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav li {
+  width: 182px;
+  height: 35px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  color: #666666;
+  font-family: 微软雅黑;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-top: 2px solid #ececec;
+  background: #f9f9f9;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav li:last-child {
+  border-left: none;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav .nav_active {
+  background: #fff;
+  border-top: 2px solid red;
+}
+
 body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabMain .nav_item {
   display: none;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabMain img {
+  width: 920px;
 }
 
 body .mainWrap .mainBox .contentFirst .indexTabBoxRight {

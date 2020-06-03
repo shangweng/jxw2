@@ -293,7 +293,7 @@ body{
        list-style: none;
        width: 184px;
        height: 35px;
-       border-bottom: 1px solid #ccc;
+   
        font-size: 16px; 
   
        text-align: center;
@@ -314,15 +314,44 @@ body{
             width: 920px;
             height: 500px;
             float: left;
-            border: 1px solid #ccc;
+            
             .indexTabNav{width: 920px;
                 overflow: hidden;
                 height: 38px;
                 position: relative;
+               
+                
+                li{
+                    width: 182px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    font-family: 微软雅黑;
+    border-left: 1px solid rgb(236, 236, 236);
+    border-right: 1px solid rgb(236, 236, 236);
+    border-bottom: 1px solid rgb(236, 236, 236);
+    border-top: 2px solid rgb(236, 236, 236);
+    background: rgb(249, 249, 249);
+                }
+                li:last-child{
+                    border-left: none;
+                }
+                .nav_active{
+                  background: #fff;
+                  border-top: 2px solid red;
+                    
+                }
             }
             .indexTabMain{
                 .nav_item{
                     display: none;
+                 
+                }
+                img{
+                    width: 920px;
                 }
             }
            
