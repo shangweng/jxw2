@@ -14,18 +14,20 @@
 
     //2.将sid传给后端
     $.ajax({
-        url: 'http://localhost/hdf_jxwproject/php/getsid.php',
+        url: 'http://10.31.162.68/hdf_jxwproject/php/getsid.php',
         data: {
             sid: $sid
+    
         },
+       
         dataType: 'json'
     }).done(function(d) {
         console.log(d);
-        $smallpic.attr('src', d.url);
-        $smallpic.attr('sid', d.sid); //给图片添加唯一的sid
-        $bpic.attr('src', d.url);
-        $title.html(d.title);
-        $price.html(d.price);
+        $smallpic.attr('src', d.goods_big_logo);
+        $smallpic.attr('sid', d.goods_id); //给图片添加唯一的sid
+        $bpic.attr('src', d.goods_big_logo);
+        $title.html(d.goods_name);
+        $price.html(d.goods_price);
         console.log(d.piclisturl.split(','));
         //渲染小图
         let picarr = d.piclisturl.split(',');
@@ -169,7 +171,7 @@
             arrnum.push($('#count').val()); //将数量push到arrnum数组中
             $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
         }
-        alert('按钮触发了');
+        alert('加入购物车')
     });
 
 

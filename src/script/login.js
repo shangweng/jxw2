@@ -2,7 +2,7 @@
     $('.btn').on('click', function () {
         $.ajax({
             type: 'post',
-            url: 'http://localhost/hdf_jxwproject/php/login.php',
+            url: 'http://10.31.162.68/hdf_jxwproject/php/login.php',
             data: {
                 user: $('.username').val(),
                 pass: hex_sha1($('.password').val())

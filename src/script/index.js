@@ -81,6 +81,11 @@
      $(this).addClass('nav_active').siblings('.indexTabNav li').removeClass('nav_active');
      $items.eq($(this).index()).show().siblings('.indexTabMain .nav_item').hide()
    })
- }())
+ }()) 
+
+//6.懒加载
+$(function () {
+  $("img.lazy").lazyload({ effect: "fadeIn" });
+});
 
 }(jQuery);

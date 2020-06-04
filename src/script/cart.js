@@ -4,7 +4,7 @@
 
     function showlist(sid, num) { //sid：编号  num：数量
         $.ajax({
-            url: 'http://localhost/hdf_jxwproject/php/alldata.php',
+            url: 'http://10.31.162.68/hdf_jxwproject/php/alldata.php',
             dataType: 'json'
         }).done(function(data) {
             $.each(data, function(index, value) {

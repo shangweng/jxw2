@@ -8,11 +8,16 @@ body {
   font-size: 12px;
 }
 
+body li {
+  list-style: none;
+}
+
 body .publicIcon {
-  width: 17px;
-  height: 17px;
-  display: inline-block;
-  margin: 0 3px;
+  background: url(../img/public-24.png) no-repeat;
+}
+
+body .newIndexIcon {
+  background: url(http://misc.jiuxian.com/img/newIndexImg/newIndexIcon-24.png) no-repeat;
 }
 
 body a {
@@ -24,8 +29,8 @@ body header {
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 26px;
   background-color: #f2f2f2;
-  height: 20px;
 }
 
 body header .header {
@@ -34,6 +39,8 @@ body header .header {
 
 body header .header .header-top-left {
   float: left;
+  height: 26px;
+  line-height: 26px;
 }
 
 body header .header .header-top-right {
@@ -41,22 +48,81 @@ body header .header .header-top-right {
   float: right;
 }
 
+body header .header .header-top-right s {
+  width: 9px;
+  height: 8px;
+  background-position: -99px 3px;
+  margin: 9px 1px 9px 3px;
+}
+
 body header .header .header-top-right li {
   display: flex;
   list-style: none;
+  line-height: 26px;
   height: 26px;
   float: left;
   padding: 0 5px;
   position: relative;
 }
 
-body header .header .header-top-right i {
+body header .header .header-top-right li .jiuxianBox2 {
+  width: 200px !important;
+}
+
+body header .header .header-top-right li .jiuxianBox2 .p1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+body header .header .header-top-right li .jiuxianBox2 .p1 span {
+  display: flex;
+  justify-content: space-around;
+}
+
+body header .header .header-top-right li .jiuxianBox {
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+  position: absolute;
+  top: 26px;
+  left: -1px;
+  z-index: 206;
+  background: #fff;
+  padding: 5px 0;
+  display: none;
+}
+
+body header .header .header-top-right li .jiuxianBox p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header .header .header-top-right li i {
+  width: 12px;
+  height: 12px;
+  margin: 7px 5px 0 0;
   overflow: hidden;
 }
 
-body .guanggaoImg {
-  display: block;
-  margin: 0 auto;
+body header .header .header-top-right li .servPhone {
+  color: #c00;
+  padding-left: 5px;
+}
+
+body header .header .header-top-right .hd-3 i {
+  background-position: -18px 1px;
+}
+
+body header .header .header-top-right .hd-5 i {
+  background-position: -62px 0;
+}
+
+body header .header .header-top-right .hd-7 i {
+  background-position: -80px 0;
+}
+
+body header .header .header-top-right .hd-8 i {
+  background-position: -90px -265px;
 }
 
 body .midHeader {
@@ -73,7 +139,7 @@ body .midHeader .midHeaderCon {
 body .midHeader .midHeaderCon .headerLogo {
   width: 257px;
   height: 65px;
-  display: inline-block;
+  float: left;
   margin-top: 30px;
   overflow: hidden;
 }
@@ -98,6 +164,62 @@ body .midHeader .midHeaderCon .headerLogo .jxwLogo {
   height: 65px;
   margin-right: 10px;
   display: inline-block;
+}
+
+body .midHeader .midHeaderCon .headerSearch {
+  width: 540px;
+  float: left;
+  margin: 32px 0 0 20px;
+}
+
+body .midHeader .midHeaderCon .headerSearch .searchHome {
+  height: 32px;
+  border: 3px solid #c00;
+  position: relative;
+  z-index: 222;
+}
+
+body .midHeader .midHeaderCon .headerSearch .searchHome .search-form {
+  width: 239px;
+  height: 22px;
+  line-height: 22px;
+  padding: 5px;
+  border: 0 none;
+  color: #666;
+  float: left;
+  outline: none;
+}
+
+body .midHeader .midHeaderCon .headerSearch .searchHome .search-btn {
+  width: 88px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  font-family: 微软雅黑;
+  float: right;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  background: #cc0000;
+}
+
+body .midHeader .midHeaderCon .headerSearch .hotWords {
+  width: 340px;
+  height: 18px;
+  overflow: hidden;
+  padding-top: 5px;
+}
+
+body .midHeader .midHeaderCon .headerProtect {
+  width: 363px;
+  float: right;
+  height: 64px;
+  margin: 33px 0 0 0;
+  background: url(http://misc.jiuxian.com/img/newIndexImg/headerProPic1.png) no-repeat top left;
 }
 
 body .navWrap {
@@ -129,9 +251,8 @@ body .navWrap .nav .navCategoryMenu .lbt-right {
   background-color: white;
 }
 
-body .navWrap .nav .navCategoryMenu .lbt-right img {
-  width: 190px;
-  height: 470px;
+body .navWrap .nav .navCategoryMenu .lbt-right li {
+  list-style: none;
 }
 
 body .navWrap .nav .navCategoryMenu h2 {
@@ -308,15 +429,6 @@ body .mainWrap {
   position: relative;
 }
 
-body .mainWrap li {
-  float: left;
-  list-style: none;
-  width: 184px;
-  height: 35px;
-  font-size: 16px;
-  text-align: center;
-}
-
 body .mainWrap .mainBox {
   width: 1200px;
   margin: 0 auto;
@@ -344,6 +456,8 @@ body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav {
 }
 
 body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabNav li {
+  float: left;
+  list-style: none;
   width: 182px;
   height: 35px;
   cursor: pointer;
@@ -372,12 +486,492 @@ body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabMain .nav_item {
   display: none;
 }
 
-body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabMain img {
-  width: 920px;
+body .mainWrap .mainBox .contentFirst .indexTabBox .indexTabMain .nav_item div {
+  float: left;
+  width: 174px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 body .mainWrap .mainBox .contentFirst .indexTabBoxRight {
   width: 270px;
   float: right;
   height: 500px;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBoxRight .indexTabNew {
+  width: 270px;
+  height: 140px;
+  background: #fff;
+  overflow: hidden;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBoxRight .indexTabNew .indexTabNewNav {
+  height: 35px;
+  position: relative;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBoxRight .indexTabNew .indexTabNewNav li {
+  float: left;
+  list-style: none;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  color: #666;
+  text-align: center;
+  width: 133px;
+  height: 35px;
+  border: 1px solid #ececec;
+  line-height: 35px;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBoxRight .indexTabNewCon {
+  border: 1px solid #ececec;
+  border-top: none;
+  height: 94px;
+  padding-top: 10px;
+}
+
+body .mainWrap .mainBox .contentFirst .indexTabBoxRight .indexTabCon li {
+  float: left;
+  width: 114px;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 28px;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo {
+  width: 268px;
+  height: 157px;
+  border: 1px solid #ececec;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo ol {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: 125px;
+  margin-left: -62px;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo ol li {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 5px;
+  float: left;
+  text-indent: -999em;
+  cursor: pointer;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo ol .active1 {
+  background-color: orange;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo img {
+  width: 268px;
+  height: 157px;
+  display: block;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo ul {
+  width: 804px;
+  height: 157px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo ul li {
+  float: left;
+  list-style: none;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo .left,
+body .mainWrap .mainBox .contentFirst .lunbo .right {
+  font-size: 60px;
+  color: #aa2f2f;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  display: none;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo .left {
+  left: 25px;
+}
+
+body .mainWrap .mainBox .contentFirst .lunbo .right {
+  right: 25px;
+}
+
+body .mainWrap .mainBox .contentFirst .swiper-container {
+  width: 268px;
+  height: 157px;
+  border: 1px solid #ececec;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+body .loadFirst {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+body .loadFirst .floorBanner {
+  height: 130px;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://img08.jiuxian.com/bill/2018/1204/9b19420219414ce08737eb0b327a7afd.jpg");
+}
+
+body .loadFirst .floorBanner p {
+  margin: 0 0 0 90px;
+  width: 290px;
+  height: 126px;
+  float: left;
+}
+
+body .loadFirst .raceBox {
+  height: 280px;
+}
+
+body .loadFirst .raceBox .titlebox {
+  height: 40px;
+  line-height: 40px;
+  background: #f9f9f9;
+  padding: 0 3px;
+}
+
+body .loadFirst .raceBox .titlebox .title_2 {
+  margin: 10px 0 0 0;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  font-size: 0;
+}
+
+body .loadFirst .raceBox .titlebox .title_2 i {
+  background-position: 0 0;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .loadFirst .raceBox .titlebox .title_2 span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 17px;
+  color: #333;
+  font-family: "微软雅黑";
+  margin-left: 10px;
+}
+
+body .loadFirst .raceBox .rightNavBox {
+  float: right;
+  height: 9px;
+  margin-top: 20px;
+  font-size: 0;
+  line-height: 0;
+}
+
+body .loadFirst .raceBox .rightNavBox span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 9px;
+  height: 9px;
+  overflow: hidden;
+  background: #cccccc;
+  margin-left: 14px;
+  cursor: pointer;
+}
+
+body .loadFirst .raceBox .swiper-container2 {
+  width: 1200px;
+  padding: 0 4px;
+  float: left;
+  overflow: hidden;
+  height: 257px;
+  background-color: #fff;
+}
+
+body .loadFirst .raceBox .swiper-container2 .swiper-wrapper {
+  height: 257px;
+}
+
+body .loadFirst .raceBox .swiper-container2 li {
+  list-style: none;
+  float: left;
+  width: 198px;
+  padding: 20px 0 10px 0;
+  position: relative;
+  z-index: 1;
+}
+
+body .loadFirst .F1 {
+  height: 510px;
+  margin-top: 50px;
+}
+
+body .loadFirst .F1 .titlebox {
+  height: 40px;
+  line-height: 40px;
+  background: #f9f9f9;
+  padding: 0 3px;
+}
+
+body .loadFirst .F1 .titlebox .comTitle {
+  float: left;
+}
+
+body .loadFirst .F1 .titlebox .comTitle .comIcon1 {
+  background-position: 0 -95px;
+}
+
+body .loadFirst .F1 .titlebox .comTitle i {
+  width: 28px;
+  height: 29px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  font-family: Arial;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 29px;
+  font-style: normal;
+}
+
+body .loadFirst .F1 .titlebox .comTitle span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  font-size: 17px;
+  margin-left: 10px;
+  font-family: "微软雅黑";
+}
+
+body .loadFirst .F1 .titlebox .rightMenu {
+  float: right;
+  margin-left: 50px;
+  color: #999;
+}
+
+body .loadFirst .F1 .spiritWrap {
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-top: 2px solid #c94b56;
+  height: 485px;
+  overflow: hidden;
+  width: 1198px;
+}
+
+body .loadFirst .F1 .spiritWrap .bannerSlier {
+  height: 485px;
+  width: 210px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+body .loadFirst .F1 .spiritWrap .swiper-wrapper {
+  height: 485px;
+}
+
+body .loadFirst .F1 .spiritWrap .spiritList {
+  background: #fff;
+  width: 988px;
+  float: right;
+  height: 485px;
+  overflow: hidden;
+  position: relative;
+}
+
+body .loadFirst .F1 .spiritWrap .spiritList li {
+  list-style: none;
+  float: left;
+  width: 196px;
+  height: 232px;
+  border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  position: relative;
+  padding-top: 10px;
+  z-index: 1;
+}
+
+body footer {
+  margin-top: 10px;
+  height: 607px;
+}
+
+body footer .footerTopBox {
+  width: 100%;
+  background: #333;
+}
+
+body footer .footerTopBox .footerTop {
+  width: 1200px;
+  margin: 0 auto;
+  height: 84px;
+  border-bottom: 1px solid #494949;
+}
+
+body footer .footerTopBox .footerTop .footerContact {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  font-family: 微软雅黑;
+  padding: 22px 0px;
+}
+
+body footer .footerTopBox .footerTop .footerContact i {
+  width: 40px;
+  height: 40px;
+  background-position: -144px -22px;
+  margin-right: 18px;
+  float: left;
+}
+
+body footer .footerTopBox .footerTop .footerContact b {
+  font-size: 24px;
+  color: #c00;
+  margin-right: 25px;
+}
+
+body footer .footerTopBox .footerTop .footerContact span {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 8px;
+}
+
+body footer .footerTopBox .footerTop .footerTopRight {
+  float: right;
+  height: 32px;
+  padding: 26px 0;
+}
+
+body footer .footerTopBox .footerTop .footerTopRight .ftRight-tit {
+  float: left;
+  line-height: 32px;
+  color: white;
+  font-family: 微软雅黑;
+  padding-right: 10px;
+}
+
+body footer .footerTopBox .footerTop .footerTopRight .ftRight-form {
+  float: left;
+  width: 240px;
+  height: 30px;
+  border: 1px solid #494949;
+  position: relative;
+  z-index: 99;
+}
+
+body footer .footerTopBox .footerTop .footerTopRight .ftRight-form input {
+  width: 190px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  background: 0;
+  border: 0;
+  float: left;
+  color: #fff;
+  outline: 0;
+}
+
+body footer .footerTopBox .footerTop .footerTopRight .ftRight-form span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  position: absolute;
+  left: 6px;
+  top: 0;
+}
+
+body footer .footerTopBox .footerTop .footerTopRight .ftRight-form i {
+  width: 22px;
+  height: 18px;
+  background-position: -133px 0;
+  margin: 6px 0 0 10px;
+  cursor: pointer;
+  float: left;
+}
+
+body footer .footerServices {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0 60px;
+}
+
+body footer .footerServices li {
+  color: white;
+  float: left;
+  margin-left: 15px;
+}
+
+body footer .footerServices li h3 {
+  font-weight: normal;
+  height: 26px;
+  line-height: 26px;
+  padding: 5px 0;
+}
+
+body footer .footerServices li h3 i {
+  background-position: 0 -131px;
+  width: 26px;
+  height: 26px;
+  margin-right: 9px;
+  float: left;
+}
+
+body footer .footerServices li p {
+  width: 123px;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 35px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+body #loutinav {
+  width: 30px;
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  z-index: 9999;
+  display: none;
+}
+
+body #loutinav li {
+  width: 30px;
+  height: 30px;
+  background: #a3a3a3;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+body #loutinav .active2 {
+  background: red;
 }
