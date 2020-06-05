@@ -12,14 +12,14 @@
         url: 'http://10.31.162.68/hdf_jxwproject/php/listdata.php',
         dataType: 'json'
     }).done(function (data) {
-    console.log(data)
+        console.log(data)
         let $strhtml = '<ul>';
         $.each(data, function (index, value) {
             $strhtml += `
                 <li>
-                    <a href="detail.html?goods_id=${value.good_id}" target="_blank">
-                        <img class="lazy" data-original="${value.goods_big_logo}" width="200" height="200"/>
-                        <p>${value.good_id}${value.goods_name}</p>
+                    <a href="detail.html?goods_id=${value.goods_id}" target="_blank">
+                        <img class="lazy"src="${value.goods_big_logo}" data-original="${value.goods_big_logo}" width="200" height="200"/>
+                        <p>${value.goods_id}${value.goods_name}</p>
                         <span class="price">￥${value.goods_price}</span>
                         <span>${value.goods_number}</span>
                     </a>
@@ -57,7 +57,7 @@
         homePage: '首页',
         endPage: '尾页',
         callback: function (api) {
-           // console.log(api.getCurrent());//获取的页码给后端
+            console.log(api.getCurrent());//获取的页码给后端
             $.ajax({
                 url: 'http://10.31.162.68/hdf_jxwproject/php/listdata.php',
                 data: {
@@ -69,8 +69,8 @@
                 $.each(data, function (index, value) {
                     $strhtml += `
                     <li>
-                    <a href="detail.html?goods_id=${value.good_id}" target="_blank">
-                        <img class="lazy" data-original="${value.goods_big_logo}" width="200" height="200"/>
+                    <a href="detail.html?goods_id=${value.goods_id}" target="_blank">
+                        <img class="lazy" src="${value.goods_big_logo}" data-original="${value.goods_big_logo}" width="200" height="200"/>
                         <p>${value.goods_id}${value.goods_name}</p>
                         <span class="price">￥${value.goods_price}</span>
                         <span>${value.goods_number}</span>

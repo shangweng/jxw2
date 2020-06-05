@@ -23,18 +23,6 @@
     });
 
 
-    //2.根据本地存储，显示用户信息
-    if (localStorage.getItem('username')) {
-        $('.login').hide();
-        $('.admin').show();
-        $('.admin span').html(localStorage.getItem('username'));
-    }
-
-    $('.admin a').on('click', function () {
-        $('.login').show();
-        $('.admin').hide();
-        localStorage.removeItem('username');
-    });
 
     //3.轮播图
 
@@ -87,5 +75,7 @@
 $(function () {
   $("img.lazy").lazyload({ effect: "fadeIn" });
 });
+
+
 
 }(jQuery);

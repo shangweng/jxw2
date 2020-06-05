@@ -1,4 +1,9 @@
 <?php
+
+
+//设置跨域的header
+header('Access-Control-Allow-Origin:*');  //允许跨域的网址，*所有的网址。
+header('Access-Control-Allow-Method:POST,GET'); //允许跨域的请求方式。
 include "conn.php";
 $sql = "select * from goods"; //获取所有的数据
 $result = $conn->query($sql); //获取数据的结果集(记录集)

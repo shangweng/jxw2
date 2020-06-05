@@ -664,6 +664,9 @@ p{
             margin-top: 20px;
             font-size: 0;
             line-height: 0;
+            .rbox{
+                background-color: red;
+            }
             span{
                 display: inline-block;
     vertical-align: middle;

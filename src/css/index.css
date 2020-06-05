@@ -691,6 +691,10 @@ body .loadFirst .raceBox .rightNavBox {
   line-height: 0;
 }
 
+body .loadFirst .raceBox .rightNavBox .rbox {
+  background-color: red;
+}
+
 body .loadFirst .raceBox .rightNavBox span {
   display: inline-block;
   vertical-align: middle;

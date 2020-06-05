@@ -1,6 +1,7 @@
 ! function($) {
     //1.获取列表页传来的sid
-    let $sid = location.search.substring(1).split('=')[1];
+    let $goods_id = location.search.substring(1).split('=')[1];
+    console.log($goods_id);
 
     const $smallpic = $('#smallpic');
     const $bpic = $('#bpic');
@@ -8,29 +9,30 @@
     const $price = $('.loadpcp');
 
     //如果$sid不存在，默认$sid = 1
-    if (!$sid) {
-        $sid = 1;
-    }
+    // if (!$goods_id) {
+    //     $goods_id = 1;
+    // }
 
     //2.将sid传给后端
     $.ajax({
         url: 'http://10.31.162.68/hdf_jxwproject/php/getsid.php',
         data: {
-            sid: $sid
+            goods_id:$goods_id
     
         },
        
         dataType: 'json'
     }).done(function(d) {
+       
         console.log(d);
         $smallpic.attr('src', d.goods_big_logo);
-        $smallpic.attr('sid', d.goods_id); //给图片添加唯一的sid
+        $smallpic.attr('goods_id', d.goods_id); //给图片添加唯一的sid
         $bpic.attr('src', d.goods_big_logo);
         $title.html(d.goods_name);
         $price.html(d.goods_price);
-        console.log(d.piclisturl.split(','));
+       // console.log(d.goods_small_logo.split(','));
         //渲染小图
-        let picarr = d.piclisturl.split(',');
+        let picarr = d.goods_small_logo.split(',');
         let $strhtml = '';
         $.each(picarr, function(index, value) {
             $strhtml += '<li><img src="' + value + '"/>></li>';
@@ -153,7 +155,7 @@
 
     $('.p-btn a').on('click', function() {
         //获取当前商品对应的sid
-        let $sid = $(this).parents('.goodsinfo').find('#smallpic').attr('sid');
+        let $sid = $(this).parents('.goodsinfo').find('#smallpic').attr('goods_id');
         //判断是第一次点击还是多次点击
         //多次点击
         //$.inArray(value,array,[fromIndex])

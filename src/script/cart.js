@@ -1,22 +1,22 @@
-! function($) {
+ ! function($) {
     //1.获取cookie渲染对应的商品列表
     //2.获取所有的接口数据，判断取值。
 
-    function showlist(sid, num) { //sid：编号  num：数量
+    function showlist(goods_id, num) { //sid：编号  num：数量
         $.ajax({
             url: 'http://10.31.162.68/hdf_jxwproject/php/alldata.php',
             dataType: 'json'
         }).done(function(data) {
             $.each(data, function(index, value) {
-                if (sid == value.sid) {
+                if (goods_id == value.goods_id) {
                     let $clonebox = $('.goods-item:hidden').clone(true, true); //克隆隐藏元素
-                    $clonebox.find('.goods-pic').find('img').attr('src', value.url);
-                    $clonebox.find('.goods-pic').find('img').attr('sid', value.sid);
-                    $clonebox.find('.goods-d-info').find('a').html(value.title);
-                    $clonebox.find('.b-price').find('strong').html(value.price);
+                    $clonebox.find('.goods-pic').find('img').attr('src', value.goods_small_logo);
+                    $clonebox.find('.goods-pic').find('img').attr('goods_id', value.goods_id);
+                    $clonebox.find('.goods-d-info').find('a').html(value.goods_name);
+                    $clonebox.find('.b-price').find('strong').html(value.goods_price);
                     $clonebox.find('.quantity-form').find('input').val(num);
                     //计算单个商品的价格
-                    $clonebox.find('.b-sum').find('strong').html((value.price * num).toFixed(2));
+                    $clonebox.find('.b-sum').find('strong').html((value.goods_price * num).toFixed(2));
                     $clonebox.css('display', 'block');
                     $('.item-list').append($clonebox);
                     calcprice(); //计算总价
@@ -132,10 +132,10 @@
 
 
     //6.删除
-    function delcookie(sid, arrsid) { //sid:当前删除的sid  arrsid:存放sid的数组[3,5,6,7]
+    function delcookie(goods_id, arrsid) { //sid:当前删除的sid  arrsid:存放sid的数组[3,5,6,7]
         let $index = -1; //删除的索引位置
         $.each(arrsid, function(index, value) {
-            if (sid === value) {
+            if (goods_id === value) {
                 $index = index;
             }
         });
@@ -160,7 +160,7 @@
             $('.goods-item:visible').each(function() {
                 if ($(this).find(':checkbox').is(':checked')) { //判断复选框是否选中
                     $(this).remove();
-                    delcookie($(this).find('img').attr('sid'), arrsid);
+                    delcookie($(this).find('img').attr('goods_id'), arrsid);
                 }
             });
             calcprice(); //计算总价
