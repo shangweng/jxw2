@@ -4,15 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注册页面</title>
+    <title>酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰店</title>
     <link rel="stylesheet" href="css/registry.css">
 </head>
 
 <body>
-
-
-
- 
 
     <div class="wrap">
         <!-- 头部 -->
@@ -91,9 +87,10 @@
                                             设置密码
                                         </div>
                                         <div class="inputBox">
-                                            <input type="password" name="password" class="username" id="phone">
+                                            <input type="password" name="password" class="username" id="passWordInput">
                                             <i class="regIcon accPass"></i>
                                             <i class="regPointIcon regFalse" style="display: none;"></i>
+                                            <span class="setPossWord"></span>
 
                                         </div>
 
@@ -104,9 +101,10 @@
                                             确认密码
                                         </div>
                                         <div class="inputBox">
-                                            <input type="password" name="repass" class="username" id="phone">
+                                            <input type="password" name="repass" class="username" id="txtRepeatPass">
                                             <i class="regIcon accPass"></i>
                                             <i class="regPointIcon regFalse" style="display: none;"></i>
+                                            <span class="RepeatPassMsg"></span>
 
                                         </div>
 
@@ -117,9 +115,10 @@
                                             邮箱
                                         </div>
                                         <div class="inputBox">
-                                            <input type="password" name="email" class="username" id="phone">
+                                            <input type="email" name="email" class="username" id="txtEmail">
                                             <i class="regIcon accCap"></i>
                                             <i class="regPointIcon regFalse" style="display: none;"></i>
+                                            <span id="EmailMsg"></span>
 
                                         </div>
 
@@ -136,7 +135,7 @@
 
                                         <div class="regAccBut">
                                             <div class="regInputBox">
-                                                <input class="regSub" type="submit"  name="submit" id="" value="立&nbsp;即&nbsp;注&nbsp;册">
+                                                <input class="regSub" type="submit"  name="submit" disabled='disabled' id="" value="立&nbsp;即&nbsp;注&nbsp;册">
                                                
                                             </div>
                                         </div>
@@ -159,9 +158,17 @@
                 <p class="red">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
             </div>
     </footer>
+    <script>
+        
+    </script>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-
+        <script>
+      $(document).ready(function(){
+        $('.regAgrInput').prop('checked',false)
+        $('.regSub').css({'background':'#ccc'})
+      })
+        </script>
     <script src="script/registry.js"></script>
 </body>
-
+    
 </html>

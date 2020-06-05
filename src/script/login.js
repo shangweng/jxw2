@@ -10,8 +10,10 @@
         }).done(function (result) {
             if (result) {
                 location.href = "index.html";
-                //$.cookie('username', $('.username').val(), { expires: 7, path: '/' });
-                localStorage.setItem('username', $('.username').val());
+                $.cookie('username', $('.username').val(), { expires: 7, path: '/' });
+              //  $.cookie('username', $('.username').val(), { expires: 7, path: '/' });
+               // localStorage.setItem('username', $('.username').val());
+
             } else {
                 $('.password').val('');
                 alert('用户名或者密码错误');
@@ -32,5 +34,11 @@ $all.on('click',function(){
     
 // })
 
+  //下拉菜单
+  $('.head-nav').hover(function(){
+    $(this).find('.pop').show()
+},function(){
+    $(this).find('.pop').hide()
+})
 
 }(jQuery);

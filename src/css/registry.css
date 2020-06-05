@@ -3,6 +3,12 @@
     padding: 0;
   
 }
+a{
+    text-decoration: none;
+}
+a:hover {
+  color: #0066cc;
+}
 body{
     font-size: 12px;
 }
@@ -68,14 +74,14 @@ header{
 
 .head-icon span{
     float: left;
-    display: inline-block;
+  
 
     margin-right: 6px;
     
 }
 .jt{
     float: left;
-    display: inline-block;
+
     width: 15px;
     height: 14px;
     background: url(../img/regLogin-8.png)no-repeat -23px 0;
@@ -151,7 +157,8 @@ main{
 .tit1{
     float: right;
     cursor: pointer;
-    display: inline-block;
+    
+    
     padding: 0 15px;
     height: 34px;
     line-height: 34px;
@@ -169,7 +176,7 @@ main{
 .tit2{
     float: right;
     cursor: pointer;
-    display: inline-block;
+ 
     padding: 0 15px;
     height: 34px;
     line-height: 34px;
@@ -211,16 +218,27 @@ main{
     padding: 55px 0 0 125px;
     float: left;
 }
+.regCon input{
+    outline: none;
+}
 .regInfor{
     margin-top: 15px;
     height: 40px;
   position: relative;
 }
-.yz{
+
+.yz{  position: absolute;
+    right: -95px;
+    top: 11px;
+
+}
+.setPossWord,.RepeatPassMsg,#EmailMsg{
     position: absolute;
-    right: -19px;
+    right: -115px;
     top: 11px;
 }
+
+
 
 .regLable{
     width: 230px;

@@ -17,8 +17,9 @@
         $.each(data, function (index, value) {
             $strhtml += `
                 <li>
+
                     <a href="detail.html?goods_id=${value.goods_id}" target="_blank">
-                        <img class="lazy"src="${value.goods_big_logo}" data-original="${value.goods_big_logo}" width="200" height="200"/>
+                        <img class="lazy" src="${value.goods_big_logo}" data-original="${value.goods_big_logo}" width="200" height="200"/>
                         <p>${value.goods_id}${value.goods_name}</p>
                         <span class="price">￥${value.goods_price}</span>
                         <span>${value.goods_number}</span>

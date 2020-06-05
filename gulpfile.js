@@ -44,6 +44,10 @@ gulp.task('copyfile1', () => {
     return gulp.src('src/fonts/*.woff')
         .pipe(gulp.dest('dist/fonts'));
 });
+gulp.task('copycss',()=>{
+    return gulp.src('src/css/*.css')
+    .pipe(gulp.dest('dist/css'))
+})
 
 //3.压缩html文件 - 引入插件包
 gulp.task('uglifyhtml', () => {
@@ -82,11 +86,18 @@ gulp.task('uglifyjs', () => {
 });
 
 //7.图片压缩 - jpg/gif/bmp/webp/ [png] - imagemin
-gulp.task('uglifyimg', () => {
-    return gulp.src('src/img/*.{jpg,png,gif}')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
-});
+// gulp.task('uglifyimg', () => {
+//     return gulp.src('src/img/*.{jpg,png,gif}')
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('dist/img'))
+// });
+
+gulp.task('images', function() {
+         return gulp.src('src/img/*.{jpg,png,gif}')
+             .pipe(imagemin( ))
+             .pipe(gulp.dest('dist/img'))
+             
+     });
 
 //8.监听
 // 监听插件-gulp-watch()
@@ -100,5 +111,5 @@ gulp.task('uglifyimg', () => {
 
 
 gulp.task('default', () => {
-    watch(['src/*.html', 'src/sass/*.scss', 'src/script/*.js'], gulp.parallel('uglifyhtml', 'compilesass', 'uglifyjs'));
+    watch(['src/*.html', 'src/sass/*.scss', 'src/script/*.js','src/css/*.css'], gulp.parallel('uglifyhtml', 'compilesass', 'uglifyjs','copycss'));
 });

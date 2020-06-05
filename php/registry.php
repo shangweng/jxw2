@@ -1,7 +1,9 @@
 <?php
 include "conn.php";
 
-
+//设置跨域的header
+header('Access-Control-Allow-Origin:*');  //允许跨域的网址，*所有的网址。
+header('Access-Control-Allow-Method:POST,GET'); //允许跨域的请求方式。
 //检测用户名是否重名
 if (isset($_POST['username'])) {
     $user = $_POST['username'];
