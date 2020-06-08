@@ -71,11 +71,50 @@
    })
  }()) 
 
+ //列表渲染
+ const $list=$('.spiritList');
+ console.log($list)
+ $.ajax({
+  url: 'http://10.31.162.68/hdf_jxwproject/php/indexdata.php',
+  dataType: 'json'
+ }).done(function(data){
+  let $strhtml = '<ul>';
+  $.each(data, function (index, value) {
+      $strhtml += `
+          <li>
+
+              <a href="detail.html?goods_id=${value.goods_id}" target="_blank">
+                  <img class="lazy" src="${value.goods_big_logo}" data-original="${value.goods_big_logo}" width="150" height="150" />
+                  <p>${value.goods_id}${value.goods_name}</p>
+                  <span class="price">￥${value.goods_price}</span>
+                  <span>${value.goods_number}</span>
+              </a>
+          </li>
+      `;
+  });
+  $strhtml += '</ul>';
+  $list.html($strhtml);
+ })
+
 //6.懒加载
 $(function () {
   $("img.lazy").lazyload({ effect: "fadeIn" });
 });
 
-
+// $(function(){
+//   $(window).on('scroll', function() {
+//     let $top = $(window).scrollTop();
+//     const $box = $('.midHeaderCon');
+//     if($top>=800){
+//       $box.stop(true).animate({
+//         top: 0
+//     });
+//     } else {
+//       $box.stop(true).animate({
+//           top: 60
+//       });
+//   }
+//   })
+// })
 
 }(jQuery);

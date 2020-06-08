@@ -125,7 +125,7 @@
 
     function setcookie(obj) {
         cookietoarray();
-        let $sid = obj.parents('.goods-item').find('img').attr('sid');
+        let $sid = obj.parents('.goods-item').find('img').attr('goods_id');
         arrnum[$.inArray($sid, arrsid)] = obj.parents('.goods-item').find('.quantity-form input').val();
         jscookie.add('cookienum', arrnum, 10);
     }
@@ -149,7 +149,7 @@
         cookietoarray();
         if (window.confirm('你确定要删除吗?')) {
             $(this).parents('.goods-item').remove();
-            delcookie($(this).parents('.goods-item').find('img').attr('sid'), arrsid);
+            delcookie($(this).parents('.goods-item').find('img').attr('goods_id'), arrsid);
             calcprice(); //计算总价
         }
     });

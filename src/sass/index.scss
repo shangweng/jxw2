@@ -1,218 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    li{
-        list-style: none;
-    }
-    font-size: 12px;
-  .publicIcon{
-    background: url(../img/public-24.png)no-repeat;
-  }
-  .newIndexIcon{
-      background: url(http://misc.jiuxian.com/img/newIndexImg/newIndexIcon-24.png)no-repeat;
-  }
-  a{
-      text-decoration: none;
-      color: rgb(92, 88, 88);
-  }
-    header{
-        display: flex;
-        justify-content: center;
-             width: 100%;
-             height: 26px;
-      background-color: #f2f2f2;
-   
-      .header{
-            
 
-          width: 1500px;
-
-          .header-top-left{
-              float: left;
-              height: 26px;
-              line-height: 26px;
-          }
-
-     
-    //   头部右边
-    .header-top-right{
-
-        height: 26px;
-        float: right;
-    
-        s{
-            width: 9px;
-    height: 8px;
-    background-position: -99px 3px;
-    margin: 9px 1px 9px 3px;
-        }
-      
-        li{
-            display: flex;
-            
-            list-style: none;
-                line-height: 26px;
-            height: 26px;
-    float: left;
-    padding: 0 5px;
-    position: relative;
-    .jiuxianBox2{
-        width: 200px !important;
-        .p1{
-            display: flex;
-            justify-content: space-around;
-            span{ display: flex;
-                justify-content: space-around;
-                
-            }
-        }
-
-    }
-    .jiuxianBox{
-        border: 1px solid #e5e5e5;
-    border-top: 0;
-    position: absolute;
-    top: 26px;
-    left: -1px;
-    z-index: 206;
-    background: #fff;
-    padding: 5px 0;
-    display: none;
-    p{
- 
-        display: flex;
-        justify-content: center;
-        align-items:center;
-    }
-
-    }
-    i{
-           
-        width: 12px;
-        height: 12px;
-        margin: 7px 5px 0 0;
-        overflow: hidden;
-    }
-    .servPhone{
-        color: #c00;
-    padding-left: 5px;
-    }
-        }
-        .hd-3 i{
-            background-position: -18px 1px;
-        }
-        .hd-5 i{
-            background-position: -62px 0;
-        }
-        .hd-7 i{
-            background-position: -80px 0;
-        }
-        .hd-8 i{
-            background-position: -90px -265px
-        }
-      
-       
-       
-    }
- }
-    }
-
-.midHeader{
-    width: 100%;
-    .midHeaderCon{
-        height: 125px;
-    width: 1200px;
-    margin: 0 auto;
-    background-color: white;
-    .headerLogo {
-        width: 257px;
-        height: 65px;
-   float: left;
-     
-        margin-top: 30px;
-        overflow: hidden;
-        p{
-            float: left;
-            text-align: left;
-            .img1{
-                width: 137px;
-    height: 65px
-            }
-            .img2{
-                width: 110px;
-    height: 65px;
-            }
- 
-        }.jxwLogo {
-            width: 137px;
-            height: 65px;
-            margin-right: 10px;
-            display: inline-block;
-        }
-      
-    }
-    //搜索内容
-    .headerSearch{
-        width: 540px;
-        float: left;
-     
-        margin: 32px 0 0 20px;
-        .searchHome{
-            height: 32px;
-    border: 3px solid #c00;
-    position: relative;
-    z-index: 222;
-    .search-form {
-        width: 239px;
-        height: 22px;
-        line-height: 22px;
-        padding: 5px;
-        border: 0 none;
-        color: #666;
-        float: left;
-        outline: none;
-    }
-   .search-btn {
-        width: 88px;
-        height: 32px;
-        line-height: 32px;
-        text-align: center;
-        font-size: 16px;
-        color: rgb(255, 255, 255);
-        cursor: pointer;
-        font-family: 微软雅黑;
-        float: right;
-        border-width: 0px;
-        border-style: initial;
-        border-color: initial;
-        border-image: initial;
-        background: rgb(204, 0, 0);
-    }
-        }
-        //商品
-        .hotWords{
-            width: 340px;
-    height: 18px;
-    overflow: hidden;
-    padding-top: 5px;
-        }
-    }
-    //右图
-    .headerProtect {
-        width: 363px;
-        float: right;
-        height: 64px;
-        margin: 33px 0 0 0;
-    
-        background: url(http://misc.jiuxian.com/img/newIndexImg/headerProPic1.png) no-repeat top left;
-    }
-
-}
-
-
-}// 导航
+// 导航
 .navWrap {
     width: 100%;
     height: 34px;
@@ -231,7 +18,7 @@ body{
             .lbt-right{
                 position: absolute;
                 top: 34px;
-                left:  984px;
+                left:  934px;
                 width: 190px;
                 height: 470px;
                 background-color: white;
@@ -268,10 +55,11 @@ body{
                 height: 470px;
                 border: none;
                 li{
+                    padding: 5px;
                     list-style: none;
                     float: left;
-    width: 190px;
-    height: 66px;
+    width: 180px;
+    height: 69px;
     background: #fff;
     border-bottom: 1px solid #e4e4e4;
     .active {
@@ -298,7 +86,7 @@ body{
                 }   
                 .cartlist {
                     position: absolute;
-                    left: 191px;
+                    left: 190px;
                     top: 0;
                     width: 998px;
                     min-height: 468px;
@@ -353,7 +141,9 @@ body{
             }
         }
             .bg{
-            position: absolute;bottom: 0;width: 1600px;height: 470px;z-index:20;opacity: 0.4;filter:alpha(opacity=40);background: black;
+            position: absolute;
+            
+            bottom: 0;width: 1600px;height: 470px;z-index:20;opacity: 0.4;filter:alpha(opacity=40);background: black;
             }
             .infoList{
             position: absolute;left: 10px;bottom: 10px;z-index: 30;
@@ -367,7 +157,7 @@ body{
             .indexList{
             position: absolute;
             right: 45%;
-            bottom: 5px;z-index: 300;
+            bottom: 5px;z-index: 99;
             text-align: center;
             color: white;
             li{width: 20px;
@@ -381,7 +171,7 @@ body{
                 
             }
             .indexOn{
-               
+               opacity: .5;
                 background: red;font-weight: bold;
                 
             
@@ -506,6 +296,8 @@ body{
               
             }
             .indexTabCon{
+                width: 100%;
+                height: 100%;
                 li{
                     float: left;
     width: 114px;
@@ -782,15 +574,23 @@ p{
                 height: 485px;
                 overflow: hidden;
                 position: relative;
-                li{list-style: none;
+                li{
+                    list-style: none;
                     float: left;
-                    width: 196px;
+                    width: 226px;
                     height: 232px;
                     border-bottom: 1px solid #ececec;
                     border-left: 1px solid #ececec;
                     position: relative;
-                    padding-top: 10px;
+                    padding: 10px;
+                 
                     z-index: 1;
+                    img{
+                        display: block;
+                        margin-left: 40px;
+                        margin-bottom: 5px;
+                    }
+                    
                 }
             }
             //
@@ -804,126 +604,7 @@ p{
 }
 
 //footer
-footer{
-    margin-top: 10px;
-    height: 607px;
-    .footerTopBox {
-        width: 100%;
-        background: #333;
-        .footerTop {
-            width: 1200px;
-            margin: 0 auto;
-            height: 84px;
-            border-bottom: 1px solid #494949;
-           .footerContact {
-                float: left;
-                height: 40px;
-                line-height: 40px;
-                font-family: 微软雅黑;
-                padding: 22px 0px;
-                
-                i{
-                    width: 40px;
-    height: 40px;
-    background-position: -144px -22px;
-    margin-right: 18px;
- 
-    float: left;
-                }
-                b{
-                    font-size: 24px;
-    color: #c00;
-    margin-right: 25px;
-                }
-                span{
-                    font-size: 14px;
-                    color: #fff;
-                    margin-right: 8px;
-                }
-            }
-        .footerTopRight {
-                float: right;
-                height: 32px;
-                padding: 26px 0;
-                .ftRight-tit {
-                    float: left;
-                    line-height: 32px;
-                    color: rgb(255, 255, 255);
-                    font-family: 微软雅黑;
-                    padding-right: 10px;
-                }
-               .ftRight-form {
-                    float: left;
-                    width: 240px;
-                    height: 30px;
-                    border: 1px solid #494949;
-                    position: relative;
-                    z-index: 99;
-                    input{
-                        width: 190px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 6px;
-    background: 0;
-    border: 0;
-    float: left;
-    color: #fff;
-    outline: 0;
-                    }
-                    span{
-                        display: inline-block;
-    height: 30px;
-    line-height: 30px;
-    color: #999;
-    position: absolute;
-    left: 6px;
-    top: 0;
-                    }
-                    i{
-                      
-    width: 22px;
-    height: 18px;
-    background-position: -133px 0;
-    margin: 6px 0 0 10px;
-    cursor: pointer;
-    float: left;
-                    }
-                }
-            }
-        }
-    }
-    .footerServices{
-        width: 1200px;
-        margin: 0 auto;
-        overflow: hidden;
-        padding: 30px 0 60px;
-        li{color: white;
-            
-            float: left;
-            margin-left: 15px;
-            h3{
-                font-weight: normal;
-    height: 26px;
-    line-height: 26px;
-    padding: 5px 0;
-    i{
-        background-position: 0 -131px;
-        width: 26px;
-    height: 26px;
-    margin-right: 9px;
-    float: left;
-    }
-}
-p{width: 123px;
-    height: 26px;
-    line-height: 26px;
-    padding-left: 35px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-            }
-        }
-    }
+
 //楼梯效果
 #loutinav {
     width: 30px;
@@ -952,4 +633,3 @@ p{width: 123px;
     
 }
 
-}
