@@ -28,13 +28,15 @@
 
     //2.获取cookie渲染数据
     if ($.cookie('cookiesid') && $.cookie('cookienum')) {
-        let s = $.cookie('cookiesid').split(','); //获取cookie 同时转换成数组[1,2]
+
+        let s =$.cookie('cookiesid').split(',') ; //获取cookie 同时转换成数组[1,2]
         let n = $.cookie('cookienum').split(','); //获取cookie 同时转换成数组[10,20]
+    
         $.each(s, function(index, value) {
             showlist(s[index], n[index]);
         });
     }
-
+    
     //3.计算总价--使用次数很多--函数封装
     function calcprice() {
         let $sum = 0; //商品的件数
@@ -125,9 +127,9 @@
 
     function setcookie(obj) {
         cookietoarray();
-        let $sid = obj.parents('.goods-item').find('img').attr('goods_id');
-        arrnum[$.inArray($sid, arrsid)] = obj.parents('.goods-item').find('.quantity-form input').val();
-        jscookie.add('cookienum', arrnum, 10);
+        let $goods_id = obj.parents('.goods-item').find('img').attr('goods_id');
+        arrnum[$.inArray($goods_id, arrsid)] = obj.parents('.goods-item').find('.quantity-form input').val();
+        document.cookie('cookienum', arrnum, 10);
     }
 
 
