@@ -10,8 +10,6 @@
         }).done(function (result) {
             if (result) {
                 location.href = "index.html";
-             
-              //  $.cookie('username', $('.username').val(), { expires: 7, path: '/' });
                 localStorage.setItem('username', $('.username').val());
 
             } else {

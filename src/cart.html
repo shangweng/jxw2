@@ -4,35 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>购物车列表展示</title>
+    <link rel="shortcut icon" href="http://misc.jiuxian.com/logo/favicon.ico" mce_href="http://misc.jiuxian.com/logo/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>购物车 </title>
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/cart2.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="thirdplugins/jquery.cookie.js"></script>
+   
 </head>
 
 <body>
-        <header>
-            <div class="header">
-                <div class="header-left">
-                        <ul>
-                            <li>hi,xxx退出</li>
-                            <li>消息</li>
-                            <li>金币</li>
-                        </ul>
-                </div>
-                <div class="header-right">
-                    <ul>
-                        <li>我的订单</li>
-                        <li>我的酒仙网</li>
-                        <li>客服热线
-                            <span>400-617-9999</span>
-                        </li>
-                    </ul>
+ 
+    <script>
+        $(function(){
+       $(".header1").load("header.html",function(){
+          var sc =  document.createElement("script");
+          sc.src= "script/localstorage.js";
+          $("body").append(sc);
+          
+       }
+       );
+   })
+   </script>
+   
+   <div class="header1" style=" width: 100%;">
 
-                </div>
-            </div>
+</div>
+ 
+<div class="header-midden">
+    <!-- <div class="jxwLogo">
+        <p style="background:url(http://misc.jiuxian.com/logo/logo_137_65.png) no-repeat;"></p>
+    </div> -->
+    <div class="jxwLogoRight">
+        <div class="pic"></div>
+        <div class="txt">
+            <span>我的购物车</span>
+            <span>确认订单信息</span>
+            <span>成功提交订单</span>
+        </div>
 
-        </header>
-    <!--main-->
+    </div>
+
+</div>
     <div id="container" class="cart">
         <div class="w">
             <!--全部商品哪一行-->
@@ -157,10 +172,24 @@
                 </div>
             </div>
         </div>
+  
     </div>
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script src="thirdplugins/jquery.cookie.js"></script>
+    <div class="footer1" style="width: 100%; height: 300px;">
+
+    </div>
+<!-- footer -->
+<script>
+    // 引入footer
+ 
+    
+    $(function(){
+           $(".footer1").load("footer.html");
+       })
+    </script>
+
     <script src="script/cart.js"></script>
+ 
+
 </body>
 
 </html>

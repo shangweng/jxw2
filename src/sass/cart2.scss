@@ -1,27 +1,41 @@
-*{
-    padding: 0;
-    margin: 0;
 
+.header1{
+    width: 100%;
+    height: 30px;
 }
-body{
-    li{
-        list-style: none;
-        float: left;
-    }
-    header{
-        width: 100%;
-        height: 27px;
-        background: #f6f6f6;
-        .header{
-            width: 1200px;
-            height: 27px;
-            margin: 0 auto;
-            .header-left{
-                float: left;
-            }
-            .header-right{
-                float: right;
-            }
+.header-midden{
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+    .jxwLogo{    float: left;
+        height: 63px;
+        margin-top: 20px;
+        width: 257px;
+        p{
+            height: 63px;
         }
+
+    }
+    .jxwLogoRight{
+        float: right;
+    margin-top: 25px;   
+    .pic{
+        width: 396px;
+    height: 27px;
+    background: url(http://misc.jiuxian.com/images/ch_icon.png) no-repeat;
+    margin: 0 26px 0 16px;
+    }
+    .txt{
+        width: 438px;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 8px;
+    span{
+        margin-right: 117px;
+    }
+    }
     }
 }

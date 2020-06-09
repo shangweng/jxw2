@@ -9,7 +9,7 @@ include "conn.php";
 //limit 10,10  从偏移量5开始 取10条
 //limit 20,10 从偏移量14开始 取10条
 
-$sql1 = "select * from goods limit 9,16";
+$sql1 = "select * from goods limit 40,10";
 $res = $conn->query($sql1);
 //通过二维数组输出
 // $result->num_rows; //记录集的条数

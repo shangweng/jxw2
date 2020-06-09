@@ -5,16 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title> 酒仙网-白酒、红酒、洋酒、保健酒、黄酒、酒具官方旗舰店 </title>
-    <meta name="Keywords" content="酒仙,酒仙网,酒仙网官方网站,酒仙网官方旗舰店" />
-    <meta name="Description" content="【酒仙网】酒水在线销售专业品牌，提供白酒、红酒、洋酒、保健酒、黄酒、酒具、正品等多种品类，官方授权在线销售，各类酒水团购、秒杀不断。" />
+    <title> 酒仙网首页 </title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> 
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <link rel="shortcut icon" href="http://misc.jiuxian.com/logo/favicon.ico" mce_href="http://misc.jiuxian.com/logo/favicon.ico" type="image/x-icon" />
 </head>
 
 <body >
+        <script>
+        $(function(){
+       $(".header1").load("header.html",function(){
+          var sc =  document.createElement("script");
+          sc.src= "script/localstorage.js";
+          $("body").append(sc);
+          
+       }
+       );
+   })
+   </script>
     <!-- 楼梯效果 -->
     <div id="loutinav">
         <ul>
@@ -27,230 +37,9 @@
         </ul>
     </div>
     <!--  -->
-    <header>
-    <div class="header">
-        <!-- 左边头部 -->
-        <div class="header-top-left">
 
-       
-        <div class="login">
-            <span>欢迎来酒仙网！</span>
-            <a href="registry.html">请注册</a>
-            <a href="login.html">请登录</a>
-        </div>
-        <div class="admin" style="display: none;">
-            <span></span>：欢迎光临
-            <a href="javascript:;" id="close">退出</a>
-        </div>
-    </div>
+    <div class="header1" style=" width: 100%;">
 
-        <!-- 头部右边 -->
-
-        <div class="header-top-right">
-            <ul class="firstU">
-                <li class="hd-1">
-                  <a href="">我的酒仙</a>
-                  <s class="publicIcon"></s>      
-
-                  <div class="jiuxianBox">
-                     <p><a href="">我的订单</a></p> 
-                     <p><a href="">物流跟踪</a></p> 
-                     <p><a href="">我的优惠劵</a></p> 
-                     
-                  </div>
-                </li>
-                <li class="hd-2">
-                    <a href="">CEO邮箱</a>
-                </li>
-                <li class="hd-3">
-                    <i class="publicIcon"></i>
-                    <a href="">购物车</a><span>0</span>
-                    <span>件</span>
-                    <div class="jiuxianBox">
-                        <p><a href="">我的订单</a></p> 
-                        <p><a href="">我的订单</a></p> 
-                        <p><a href="">我的订单</a></p> 
-                        
-                     </div>
-                </li>
-           <li>CLUB会员
-                </li>
-                <li>
-                    招商入驻
-                </li>
-                <li class="hd-5">
-                    <div>
-                        <i class="publicIcon"></i>
-                        手机逛酒仙
-                    </div>
-                    <div class="jiuxianBox">
-                        <img class="lazy" data-original="http://misc.jiuxian.com/img/newIndexImg/jxPho-code.jpg" width="80" height="80" alt="">
-                    </div>
-                </li>
-                <li class="hd-7">
-                    <i class="publicIcon"></i>
-                 
-                    网站导航
-                    <div class="jiuxianBox jiuxianBox2" >
-                        
-                        <p class="p1">
-                           
-           <span>白酒</span> 
-            <span>葡萄酒</span> 
-          <span>洋酒</span>
-                        </p>
-                        <p class="p1">
-                            <span>白酒</span> 
-            <span>葡萄酒</span> 
-          <span>洋酒</span>
-                        </p>
-
-                        <p class="p1">
-                            <span>白酒</span> 
-                            <span>葡萄酒</span> 
-                          <span>洋酒</span>
-                        </p>
-                    </div>
-
-                </li>
-                <li class="hd-8">
-                    <i class="publicIcon"></i>
-                    客户服务
-                    <div class="jiuxianBox">
-                        <p>常见问题</p>
-                        <p>配送说明</p>
-                        <p>售后服务</p>
-                        </div>
-                </li>
-                <li >
-                   <span>客服热线</span> 
-                   <b class="servPhone"> 400-156-2662</b>
-                  
-                </li>
-            </ul>
-
-        </div>
-    </div>
-</header>
-
-    <img src="http://img09.jiuxian.com/bill/2020/0531/2987f1c858dd4f63a182554d73dae441.jpg" alt="" class="guanggaoImg" >
-    <div class="midHeader">
-        <div class="midHeaderCon">
-            <div class="headerLogo">
-                <p class="jxwLogo">
-                    <img src="img/logo.jpg" alt="" class="img1">
-                </p>
-                <p>
-                    <img src="http://img08.jiuxian.com/bill/2019/1111/9d7ea5de698e4bacab10b92579742616.gif" alt="" class="img2">
-                </p>
-            </div>
-            <!-- 搜索内容 -->
-                <div class="headerSearch">
-                    <div class="searchHome">
-                        <form action="">
-                            <input type="text" class="search-form">
-                            <input type="submit" class="search-btn" value="搜索">
-                        </form>
-                    </div>
-                    <!-- 商品 -->
-                    <div class="hotWords">
-                        <p>五粮液&nbsp;| &nbsp;茅台&nbsp;|&nbsp;酒鬼&nbsp;|&nbsp;拉菲&nbsp;|&nbsp;郎酒&nbsp;|&nbsp;黄尾袋鼠&nbsp;|&nbsp;水井坊</p>
-                    </div>
-
-
-
-                </div>
-            <!-- 搜索内容 -->
-
-            <!-- 右图 -->
-            <div class="headerProtect"></div>
-        </div>
-
-    </div>
-    <!-- 导航 -->
-    <div class="navWrap">
-
-        <div class="nav">
-            <div class="navCategoryMenu ">
-                <!-- 轮播图右边 -->
-                <div class="lbt-right">
-                   <li><img class="lazy" data-original="http://img10.jiuxian.com/bill/2018/1218/e4c6ed040163475eb548dcb82e5db7a2.png" alt=""></li>
-                   <li><img class="lazy" data-original="http://img06.jiuxian.com/bill/2018/1116/24197e05a3764c2db008c26abe0114d7.png" alt=""></li>
-                   <li><img class="lazy" data-original="http://img09.jiuxian.com/bill/2018/1116/9afd5071f4f948ec9b5d8db94d4ea30e.png" alt=""></li>
-
-                </div>
-                <h2>全部商品分类</h2>
-                <ul class=" clearfix menu">
-                    <li>
-                        <a href="#">一键选酒</a>
-                        <p>
-                            整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
-                            
-                           <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
-                    </li>
-                    <li>
-                        <a href="#">白酒</a>
-                        <p>
-                            整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
-                            
-                            <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
-                    </li>
-                    <li>
-                        <a href="#">葡萄酒</a>
-                        <p>
-                            整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
-                            
-                            <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
-                    </li>
-                    <li>
-                        <a href="#">洋酒</a>
-                        <p>
-                            整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
-                            
-                            <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
-                    </li>
-                    <li>
-                        <a href="#">啤酒/黄酒/养生酒</a>
-                        <p>
-                            整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
-                            
-                            <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
-                    </li>
-                    <li>
-                        <a href="#">食品</a>
-                        <p>
-                            整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
-                            
-                            <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
-                    </li>
-                 
-             
-
-                <div class="cartlist">
-                    <div class="item"><a href="list.html">整箱购精品酒铺家乡名酒老酒特卖实惠大坛有礼有面海外直采</a></div>
-                    <div class="item">第二块内容</div>
-                    <div class="item">第三块内容</div>
-                    <div class="item">第四块内容</div>
-                    <div class="item">第四块内容</div>
-                   
-                
-                   
-                </div>
-            </ul>
-            </div>
-            <!-- 横导航 start    -->
-            <ul class="navList">
-                <li>首页</li>
-                <li>自营甄选</li>
-                <li>爆品腰斩日</li>
-                <li>葡萄酒馆</li>
-                <li>周末惠</li>
-                <li>洋酒馆</li>
-                <li>新品</li>
-                <li>CLUB</li>
-                <li>门店加盟</li>
-            </ul>
-        </div>
     </div>
   
 
@@ -259,6 +48,69 @@
 
 
     <div class="wrapper"><!-- 最外层部分 -->
+        <div class="lbt-right">
+            <li><img class="lazy" data-original="http://img10.jiuxian.com/bill/2018/1218/e4c6ed040163475eb548dcb82e5db7a2.png" alt=""></li>
+            <li><img class="lazy" data-original="http://img06.jiuxian.com/bill/2018/1116/24197e05a3764c2db008c26abe0114d7.png" alt=""></li>
+            <li><img class="lazy" data-original="http://img09.jiuxian.com/bill/2018/1116/9afd5071f4f948ec9b5d8db94d4ea30e.png" alt=""></li>
+    
+         </div>
+         <ul class=" clearfix menu">
+            <li>
+                <a href="#">一键选酒</a>
+                <p>
+                    整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
+                    
+                   <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
+            </li>
+            <li>
+                <a href="#">白酒</a>
+                <p>
+                    整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
+                    
+                    <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
+            </li>
+            <li>
+                <a href="#">葡萄酒</a>
+                <p>
+                    整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
+                    
+                    <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
+            </li>
+            <li>
+                <a href="#">洋酒</a>
+                <p>
+                    整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
+                    
+                    <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
+            </li>
+            <li>
+                <a href="#">啤酒/黄酒/养生酒</a>
+                <p>
+                    整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
+                    
+                    <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
+            </li>
+            <li>
+                <a href="#">食品</a>
+                <p>
+                    整箱购&nbsp;&nbsp;家乡名酒&nbsp;&nbsp;老酒特卖&nbsp;&nbsp;年份酒</p>
+                    
+                    <p>地域名酒&nbsp;&nbsp;值得买&nbsp;&nbsp;实惠大坛</p>
+            </li>
+         
+     
+    
+        <div class="cartlist">
+            <div class="item"><a href="list.html">整箱购精品酒铺家乡名酒老酒特卖实惠大坛有礼有面海外直采</a></div>
+            <div class="item">第二块内容</div>
+            <div class="item">第三块内容</div>
+            <div class="item">第四块内容</div>
+            <div class="item">第四块内容</div>
+           
+        
+           
+        </div>
+    </ul>
         <div class="banner"><!-- 轮播部分 -->
           <ul class="imgList"><!-- 图片部分 -->
             <li class="imgOn"><a href="#"><img src="http://img08.jiuxian.com/bill/2020/0530/5e015a4a4b6a45e992cbcb7b041bd84d.jpg" width="1519px" height="470px" alt="puss in boots1"></a></li>
@@ -301,181 +153,22 @@
                 </div>
 
                 <div class="indexTabMain">
-                    <ul>
+                    <ul >
                         <li class="nav_item" style="display: block;" >
-                       <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                    <p>1111111</p>
-                    <p style="color:red">￥445</p>
-                    </div> 
-                     <div><img src="http://img09.jiuxian.com/2018/0724/4f6075adb82e4f7bb433faf38f8872042.jpg" alt=""width='160' height="160">
-                        <p>1111111</p>
-                        <p style="color:red">￥445</p></div>  
-                     <div><img src="http://img09.jiuxian.com/2020/0515/dc7a5653729e4476a74bd709cd4ec51a2.jpg" alt=""width='160' height="160">
-                        <p>1111111</p>
-                        <p style="color:red">￥445</p></div>   
-                        <div><img src="http://img09.jiuxian.com/2020/0224/40228630d0ba49b891274ec8828045652.jpg" alt=""width='160' height="160">
-                            <p>1111111</p>
-                            <p style="color:red">￥445</p></div>  
-                            <div><img src="http://img09.jiuxian.com/2020/0228/fa12d0fd43e84c02a36318412f791c022.jpg" alt=""width='160' height="160">
-                                <p>1111111</p>
-                                <p style="color:red">￥445</p></div> 
-                                <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                                    <p>1111111</p>
-                                    <p style="color:red">￥445</p>
-                                    </div> 
-                                     <div><img src="http://img09.jiuxian.com/2018/0724/4f6075adb82e4f7bb433faf38f8872042.jpg" alt=""width='160' height="160">
-                                        <p>1111111</p>
-                                        <p style="color:red">￥445</p></div>  
-                                     <div><img src="http://img09.jiuxian.com/2020/0515/dc7a5653729e4476a74bd709cd4ec51a2.jpg" alt=""width='160' height="160">
-                                        <p>1111111</p>
-                                        <p style="color:red">￥445</p></div>   
-                                        <div><img src="http://img09.jiuxian.com/2020/0224/40228630d0ba49b891274ec8828045652.jpg" alt=""width='160' height="160">
-                                            <p>1111111</p>
-                                            <p style="color:red">￥445</p></div>  
-                                            <div><img src="http://img09.jiuxian.com/2020/0228/fa12d0fd43e84c02a36318412f791c022.jpg" alt=""width='160' height="160">
-                                                <p>1111111</p>
-                                                <p style="color:red">￥445</p></div> 
+
+                 
                         </li>
                         <li  class="nav_item">
-                            <div ><img src="http://img07.jiuxian.com/2018/0929/98fe57dba0e1481f8537c36e596dc8d52.jpg" alt=""width='160' height="160">
-                                <p>1111111</p>
-                                <p style="color:red">￥445</p>
-                                </div> 
-                                 <div><img src="http://img07.jiuxian.com/2019/0705/2c4ebce394a54220a300a4740f8ef07a2.jpg" alt=""width='160' height="160">
-                                    <p>1111111</p>
-                                    <p style="color:red">￥445</p></div>  
-                                 <div><img src="http://img07.jiuxian.com/2020/0529/8e7cd374d51b440d8d837424e3d5240e2.jpg" alt=""width='160' height="160">
-                                    <p>1111111</p>
-                                    <p style="color:red">￥445</p></div>   
-                                    <div><img src="http://img07.jiuxian.com/2016/1201/bb7849db39104572af53688e7ebf1fb62.jpg" alt=""width='160' height="160">
-                                        <p>1111111</p>
-                                        <p style="color:red">￥445</p></div>  
-                                        <div><img src="http://img07.jiuxian.com/2020/0413/deaa991f9b6a4d32ac0060dab647c0ca2.jpg" alt=""width='160' height="160">
-                                            <p>1111111</p>
-                                            <p style="color:red">￥445</p></div> 
-                                            <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                                                <p>1111111</p>
-                                                <p style="color:red">￥445</p>
-                                                </div> 
-                                                <div ><img src="http://img07.jiuxian.com/2018/0929/98fe57dba0e1481f8537c36e596dc8d52.jpg" alt=""width='160' height="160">
-                                                    <p>1111111</p>
-                                                    <p style="color:red">￥445</p>
-                                                    </div> 
-                                                     <div><img src="http://img07.jiuxian.com/2019/0705/2c4ebce394a54220a300a4740f8ef07a2.jpg" alt=""width='160' height="160">
-                                                        <p>1111111</p>
-                                                        <p style="color:red">￥445</p></div>  
-                                                     <div><img src="http://img07.jiuxian.com/2020/0529/8e7cd374d51b440d8d837424e3d5240e2.jpg" alt=""width='160' height="160">
-                                                        <p>1111111</p>
-                                                        <p style="color:red">￥445</p></div>   
-                                                        <div><img src="http://img07.jiuxian.com/2016/1201/bb7849db39104572af53688e7ebf1fb62.jpg" alt=""width='160' height="160">
-                                                            <p>1111111</p>
-                                                            <p style="color:red">￥445</p></div>  
-                                                             
+                                                                      
                         </li>
                         <li class="nav_item"  >
-                            <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                         <p>1111111</p>
-                         <p style="color:red">￥445</p>
-                         </div> 
-                          <div><img src="http://img09.jiuxian.com/2018/0724/4f6075adb82e4f7bb433faf38f8872042.jpg" alt=""width='160' height="160">
-                             <p>1111111</p>
-                             <p style="color:red">￥445</p></div>  
-                          <div><img src="http://img09.jiuxian.com/2020/0515/dc7a5653729e4476a74bd709cd4ec51a2.jpg" alt=""width='160' height="160">
-                             <p>1111111</p>
-                             <p style="color:red">￥445</p></div>   
-                             <div><img src="http://img09.jiuxian.com/2020/0224/40228630d0ba49b891274ec8828045652.jpg" alt=""width='160' height="160">
-                                 <p>1111111</p>
-                                 <p style="color:red">￥445</p></div>  
-                                 <div><img src="http://img09.jiuxian.com/2020/0228/fa12d0fd43e84c02a36318412f791c022.jpg" alt=""width='160' height="160">
-                                     <p>1111111</p>
-                                     <p style="color:red">￥445</p></div> 
-                                     <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                                         <p>1111111</p>
-                                         <p style="color:red">￥445</p>
-                                         </div> 
-                                          <div><img src="http://img09.jiuxian.com/2018/0724/4f6075adb82e4f7bb433faf38f8872042.jpg" alt=""width='160' height="160">
-                                             <p>1111111</p>
-                                             <p style="color:red">￥445</p></div>  
-                                          <div><img src="http://img09.jiuxian.com/2020/0515/dc7a5653729e4476a74bd709cd4ec51a2.jpg" alt=""width='160' height="160">
-                                             <p>1111111</p>
-                                             <p style="color:red">￥445</p></div>   
-                                             <div><img src="http://img09.jiuxian.com/2020/0224/40228630d0ba49b891274ec8828045652.jpg" alt=""width='160' height="160">
-                                                 <p>1111111</p>
-                                                 <p style="color:red">￥445</p></div>  
-                                                 <div><img src="http://img09.jiuxian.com/2020/0228/fa12d0fd43e84c02a36318412f791c022.jpg" alt=""width='160' height="160">
-                                                     <p>1111111</p>
-                                                     <p style="color:red">￥445</p></div> 
+ 
                              </li>
                         <li  class="nav_item">
-                            <div ><img src="http://img07.jiuxian.com/2018/0929/98fe57dba0e1481f8537c36e596dc8d52.jpg" alt=""width='160' height="160">
-                                <p>1111111</p>
-                                <p style="color:red">￥445</p>
-                                </div> 
-                                 <div><img src="http://img07.jiuxian.com/2019/0705/2c4ebce394a54220a300a4740f8ef07a2.jpg" alt=""width='160' height="160">
-                                    <p>1111111</p>
-                                    <p style="color:red">￥445</p></div>  
-                                 <div><img src="http://img07.jiuxian.com/2020/0529/8e7cd374d51b440d8d837424e3d5240e2.jpg" alt=""width='160' height="160">
-                                    <p>1111111</p>
-                                    <p style="color:red">￥445</p></div>   
-                                    <div><img src="http://img07.jiuxian.com/2016/1201/bb7849db39104572af53688e7ebf1fb62.jpg" alt=""width='160' height="160">
-                                        <p>1111111</p>
-                                        <p style="color:red">￥445</p></div>  
-                                        <div><img src="http://img07.jiuxian.com/2020/0413/deaa991f9b6a4d32ac0060dab647c0ca2.jpg" alt=""width='160' height="160">
-                                            <p>1111111</p>
-                                            <p style="color:red">￥445</p></div> 
-                                            <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                                                <p>1111111</p>
-                                                <p style="color:red">￥445</p>
-                                                </div> 
-                                                <div ><img src="http://img07.jiuxian.com/2018/0929/98fe57dba0e1481f8537c36e596dc8d52.jpg" alt=""width='160' height="160">
-                                                    <p>1111111</p>
-                                                    <p style="color:red">￥445</p>
-                                                    </div> 
-                                                     <div><img src="http://img07.jiuxian.com/2019/0705/2c4ebce394a54220a300a4740f8ef07a2.jpg" alt=""width='160' height="160">
-                                                        <p>1111111</p>
-                                                        <p style="color:red">￥445</p></div>  
-                                                     <div><img src="http://img07.jiuxian.com/2020/0529/8e7cd374d51b440d8d837424e3d5240e2.jpg" alt=""width='160' height="160">
-                                                        <p>1111111</p>
-                                                        <p style="color:red">￥445</p></div>   
-                                                        <div><img src="http://img07.jiuxian.com/2016/1201/bb7849db39104572af53688e7ebf1fb62.jpg" alt=""width='160' height="160">
-                                                            <p>1111111</p>
-                                                            <p style="color:red">￥445</p></div>  
-                                                       
-                                                                
+                                    
                         </li>
                         <li class="nav_item"  >
-                            <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                         <p>1111111</p>
-                         <p style="color:red">￥445</p>
-                         </div> 
-                          <div><img src="http://img09.jiuxian.com/2018/0724/4f6075adb82e4f7bb433faf38f8872042.jpg" alt=""width='160' height="160">
-                             <p>1111111</p>
-                             <p style="color:red">￥445</p></div>  
-                          <div><img src="http://img09.jiuxian.com/2020/0515/dc7a5653729e4476a74bd709cd4ec51a2.jpg" alt=""width='160' height="160">
-                             <p>1111111</p>
-                             <p style="color:red">￥445</p></div>   
-                             <div><img src="http://img09.jiuxian.com/2020/0224/40228630d0ba49b891274ec8828045652.jpg" alt=""width='160' height="160">
-                                 <p>1111111</p>
-                                 <p style="color:red">￥445</p></div>  
-                                 <div><img src="http://img09.jiuxian.com/2020/0228/fa12d0fd43e84c02a36318412f791c022.jpg" alt=""width='160' height="160">
-                                     <p>1111111</p>
-                                     <p style="color:red">￥445</p></div> 
-                                     <div ><img src="http://img09.jiuxian.com/2017/0803/6ce2bdc8ad8e4c59936661b86301e77c2.jpg" alt=""width='160' height="160">
-                                         <p>1111111</p>
-                                         <p style="color:red">￥445</p>
-                                         </div> 
-                                          <div><img src="http://img09.jiuxian.com/2018/0724/4f6075adb82e4f7bb433faf38f8872042.jpg" alt=""width='160' height="160">
-                                             <p>1111111</p>
-                                             <p style="color:red">￥445</p></div>  
-                                          <div><img src="http://img09.jiuxian.com/2020/0515/dc7a5653729e4476a74bd709cd4ec51a2.jpg" alt=""width='160' height="160">
-                                             <p>1111111</p>
-                                             <p style="color:red">￥445</p></div>   
-                                             <div><img src="http://img09.jiuxian.com/2020/0224/40228630d0ba49b891274ec8828045652.jpg" alt=""width='160' height="160">
-                                                 <p>1111111</p>
-                                                 <p style="color:red">￥445</p></div>  
-                                                 <div><img src="http://img09.jiuxian.com/2020/0228/fa12d0fd43e84c02a36318412f791c022.jpg" alt=""width='160' height="160">
-                                                     <p>1111111</p>
-                                                     <p style="color:red">￥445</p></div> 
+                      
                              </li>
                     </ul>
                 </div>
@@ -578,110 +271,14 @@
 <!-- Swiper -->
 <div class="swiper-container2">
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <ul>
-                <li>
-                    <img img src="http://img08.jximage.com/2020/0413/6fd0b178ff244a3c8520467fe714870b2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img img src="http://img08.jximage.com/2017/1023/030ec43c06cc47fe9534aeed3790d8482.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img img src="http://img08.jximage.com/2020/0526/6930748f19474c10bf69ee6a86b7d0752.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img img src="http://img08.jximage.com/2020/0413/6fd0b178ff244a3c8520467fe714870b2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img img src="http://img08.jximage.com/2019/1030/60b80bfc02ad4ad3976aaa17b463dd0d2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img img src="http://img08.jximage.com/2020/0413/9afecae85abd4308ad1834985af2581b2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-
-            </ul>
+        <div class="swiper-slide"> 
+      
         </div>
         <div class="swiper-slide">
-            <ul>
-                <li>
-                    <img src="http://img09.jximage.com/2017/0602/46e7bd33e17d4e9baac1a9d282e989322.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img09.jximage.com/2019/0508/f89d6d7b931f40f48f89aca5539147942.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img09.jximage.com/2020/0429/839ed087a2a8481f8c8f6d827ac3fdd32.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img09.jximage.com/2019/1119/26b9cebf8a844775a81c2efe91ae71282.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img09.jximage.com/2019/0722/941d61f2a9dd47a781440e0f6f09eab42.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img09.jximage.com/2020/0228/fa12d0fd43e84c02a36318412f791c022.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-
-            </ul>
+          
         </div>
         <div class="swiper-slide">
-            <ul>
-                <li>
-                    <img src="http://img06.jiuxian.com/2019/0722/8b9603a8939c4823bddb6aee876e57df2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img06.jiuxian.com/2019/0130/89a0f183e531468080b7c20c34ad8aaa2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img06.jiuxian.com/2020/0110/c16d4b42dccb4f7c8bdb940578162ec32.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img06.jiuxian.com/2020/0110/c16d4b42dccb4f7c8bdb940578162ec32.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img06.jiuxian.com/2020/0108/0cfee5aeaf364d34a21bea206f8e367c2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-                <li>
-                    <img src="http://img06.jiuxian.com/2018/0404/2bf18fb126774d578af8498cc0ec7d1d2.jpg" alt="">
-                    <p>52°水井坊臻酿八号500ml</p>
-                    <p style="color:red">￥355.00</p>
-                </li>
-
-            </ul>
+           
         </div>
     </div>
  
@@ -719,79 +316,7 @@
     
 <!-- 内容 -->
 <div class="spiritList">
-    <!-- <ul>
-        <li>
-        <img class="lazy" data-original="http://img07.jiuxian.com/2016/0901/e3160f2d3f0f4e6da7f1c3d696b82f4f2.jpg" alt="">
-        <p>
-            <img class="lazy" data-original="http://misc.jiuxian.com/images/zhenxuan.jpg" alt="">
-            54°董酒尊享封藏大坛1500ml</p>
-        <p style="color:red">￥528.00</p>
-        </li>
-        <li>
-            <img class="lazy" data-original="http://img07.jiuxian.com/2019/1218/d00d5cceb4c747ea9091808882cb94b82.jpg" alt="">
-            <p>
-          
-                54°董酒尊享封藏大坛1500ml</p>
-            <p style="color:red">￥528.00</p>
-            </li>
-            <li>
-                <img class="lazy" data-original="http://img07.jiuxian.com/2020/0316/2be073a2e7ad4031ad1f298e9214e2ea2.jpg" alt="">
-                <p>
-              
-                    54°董酒尊享封藏大坛1500ml</p>
-                <p style="color:red">￥528.00</p>
-                </li>
-                <li>
-                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1122/eba41a9192db4869a12eacc244dda20f2.jpg" alt="">
-                    <p>
-                  
-                        54°董酒尊享封藏大坛1500ml</p>
-                    <p style="color:red">￥528.00</p>
-                    </li>
-                    <li>
-                        <img class="lazy" data-original="http://img07.jiuxian.com/2020/0425/ed975ad0b3dd49028f1e3702d00f3aaf2.jpg" alt="">
-                        <p>
-                      
-                            54°董酒尊享封藏大坛1500ml</p>
-                        <p style="color:red">￥528.00</p>
-                        </li>
-                        <li>
-                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0731/41f8afccc3384c689f12948c02dce5e12.jpg" alt="">
-                            <p>
-                          
-                                54°董酒尊享封藏大坛1500ml</p>
-                            <p style="color:red">￥528.00</p>
-                            </li>
-                            <li>
-                                <img class="lazy" data-original="http://img07.jiuxian.com/2018/1107/8e2e5619b1e84fcd800db0aa7e8dd7c12.jpg" alt="">
-                                <p>
-                              
-                                    54°董酒尊享封藏大坛1500ml</p>
-                                <p style="color:red">￥528.00</p>
-                                </li>
-                                <li>
-                                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1129/14b28d5d0b6643d8bf479279b7dc9e102.jpg" alt="">
-                                    <p>
-                                  
-                                        54°董酒尊享封藏大坛1500ml</p>
-                                    <p style="color:red">￥528.00</p>
-                                    </li>
-                                    <li>
-                                        <img class="lazy" data-original="http://img07.jiuxian.com/2019/0906/788f8128d60b42a9bdad28698a635a962.jpg" alt="">
-                                        <p>
-                                      
-                                            54°董酒尊享封藏大坛1500ml</p>
-                                        <p style="color:red">￥528.00</p>
-                                        </li>
-                                        <li>
-                                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0424/a74c29f8f25b4fcd954db418428754cd2.jpg" alt="">
-                                            <p>
-                                          
-                                                54°董酒尊享封藏大坛1500ml</p>
-                                            <p style="color:red">￥528.00</p>
-                                            </li>
-    </ul> -->
-
+   
 </div>
 <!--  -->
 
@@ -827,79 +352,7 @@
     
 <!-- 内容 -->
 <div class="spiritList">
-    <!-- <ul>
-        <li>
-        <img img class="lazy" data-original="http://img07.jiuxian.com/2016/0901/e3160f2d3f0f4e6da7f1c3d696b82f4f2.jpg" alt="">
-        <p>
-            <img class="lazy" data-original="http://misc.jiuxian.com/images/zhenxuan.jpg" alt="">
-            54°董酒尊享封藏大坛1500ml</p>
-        <p style="color:red">￥528.00</p>
-        </li>
-        <li>
-            <img img class="lazy" data-original="http://img07.jiuxian.com/2019/1218/d00d5cceb4c747ea9091808882cb94b82.jpg" alt="">
-            <p>
-          
-                54°董酒尊享封藏大坛1500ml</p>
-            <p style="color:red">￥528.00</p>
-            </li>
-            <li>
-                <img img class="lazy" data-original="http://img07.jiuxian.com/2020/0316/2be073a2e7ad4031ad1f298e9214e2ea2.jpg" alt="">
-                <p>
-              
-                    54°董酒尊享封藏大坛1500ml</p>
-                <p style="color:red">￥528.00</p>
-                </li>
-                <li>
-                    <img img class="lazy" data-original="http://img07.jiuxian.com/2019/1122/eba41a9192db4869a12eacc244dda20f2.jpg" alt="">
-                    <p>
-                  
-                        54°董酒尊享封藏大坛1500ml</p>
-                    <p style="color:red">￥528.00</p>
-                    </li>
-                    <li>
-                        <img img class="lazy" data-original="http://img07.jiuxian.com/2020/0425/ed975ad0b3dd49028f1e3702d00f3aaf2.jpg" alt="">
-                        <p>
-                      
-                            54°董酒尊享封藏大坛1500ml</p>
-                        <p style="color:red">￥528.00</p>
-                        </li>
-                        <li>
-                            <img img class="lazy" data-original="http://img07.jiuxian.com/2018/0731/41f8afccc3384c689f12948c02dce5e12.jpg" alt="">
-                            <p>
-                          
-                                54°董酒尊享封藏大坛1500ml</p>
-                            <p style="color:red">￥528.00</p>
-                            </li>
-                            <li>
-                                <img img class="lazy" data-original="http://img07.jiuxian.com/2018/1107/8e2e5619b1e84fcd800db0aa7e8dd7c12.jpg" alt="">
-                                <p>
-                              
-                                    54°董酒尊享封藏大坛1500ml</p>
-                                <p style="color:red">￥528.00</p>
-                                </li>
-                                <li>
-                                    <img img class="lazy" data-original="http://img07.jiuxian.com/2019/1129/14b28d5d0b6643d8bf479279b7dc9e102.jpg" alt="">
-                                    <p>
-                                  
-                                        54°董酒尊享封藏大坛1500ml</p>
-                                    <p style="color:red">￥528.00</p>
-                                    </li>
-                                    <li>
-                                        <img img class="lazy" data-original="http://img07.jiuxian.com/2019/0906/788f8128d60b42a9bdad28698a635a962.jpg" alt="">
-                                        <p>
-                                      
-                                            54°董酒尊享封藏大坛1500ml</p>
-                                        <p style="color:red">￥528.00</p>
-                                        </li>
-                                        <li>
-                                            <img img class="lazy" data-original="http://img07.jiuxian.com/2018/0424/a74c29f8f25b4fcd954db418428754cd2.jpg" alt="">
-                                            <p>
-                                          
-                                                54°董酒尊享封藏大坛1500ml</p>
-                                            <p style="color:red">￥528.00</p>
-                                            </li>
-    </ul> -->
-
+   
 </div>
 <!--  -->
 
@@ -935,78 +388,7 @@
     
 <!-- 内容 -->
 <div class="spiritList">
-    <!-- <ul>
-        <li>
-        <img class="lazy" data-original="http://img07.jiuxian.com/2016/0901/e3160f2d3f0f4e6da7f1c3d696b82f4f2.jpg" alt="">
-        <p>
-            <img class="lazy" data-original="http://misc.jiuxian.com/images/zhenxuan.jpg" alt="">
-            54°董酒尊享封藏大坛1500ml</p>
-        <p style="color:red">￥528.00</p>
-        </li>
-        <li>
-            <img class="lazy" data-original="http://img07.jiuxian.com/2019/1218/d00d5cceb4c747ea9091808882cb94b82.jpg" alt="">
-            <p>
-          
-                54°董酒尊享封藏大坛1500ml</p>
-            <p style="color:red">￥528.00</p>
-            </li>
-            <li>
-                <img class="lazy" data-original="http://img07.jiuxian.com/2020/0316/2be073a2e7ad4031ad1f298e9214e2ea2.jpg" alt="">
-                <p>
-              
-                    54°董酒尊享封藏大坛1500ml</p>
-                <p style="color:red">￥528.00</p>
-                </li>
-                <li>
-                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1122/eba41a9192db4869a12eacc244dda20f2.jpg" alt="">
-                    <p>
-                  
-                        54°董酒尊享封藏大坛1500ml</p>
-                    <p style="color:red">￥528.00</p>
-                    </li>
-                    <li>
-                        <img class="lazy" data-original="http://img07.jiuxian.com/2020/0425/ed975ad0b3dd49028f1e3702d00f3aaf2.jpg" alt="">
-                        <p>
-                      
-                            54°董酒尊享封藏大坛1500ml</p>
-                        <p style="color:red">￥528.00</p>
-                        </li>
-                        <li>
-                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0731/41f8afccc3384c689f12948c02dce5e12.jpg" alt="">
-                            <p>
-                          
-                                54°董酒尊享封藏大坛1500ml</p>
-                            <p style="color:red">￥528.00</p>
-                            </li>
-                            <li>
-                                <img class="lazy" data-original="http://img07.jiuxian.com/2018/1107/8e2e5619b1e84fcd800db0aa7e8dd7c12.jpg" alt="">
-                                <p>
-                              
-                                    54°董酒尊享封藏大坛1500ml</p>
-                                <p style="color:red">￥528.00</p>
-                                </li>
-                                <li>
-                                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1129/14b28d5d0b6643d8bf479279b7dc9e102.jpg" alt="">
-                                    <p>
-                                  
-                                        54°董酒尊享封藏大坛1500ml</p>
-                                    <p style="color:red">￥528.00</p>
-                                    </li>
-                                    <li>
-                                        <img class="lazy" data-original="http://img07.jiuxian.com/2019/0906/788f8128d60b42a9bdad28698a635a962.jpg" alt="">
-                                        <p>
-                                      
-                                            54°董酒尊享封藏大坛1500ml</p>
-                                        <p style="color:red">￥528.00</p>
-                                        </li>
-                                        <li>
-                                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0424/a74c29f8f25b4fcd954db418428754cd2.jpg" alt="">
-                                            <p>
-                                          
-                                                54°董酒尊享封藏大坛1500ml</p>
-                                            <p style="color:red">￥528.00</p>
-                                            </li>
-    </ul> -->
+  
 
 </div>
 <!--  -->
@@ -1042,78 +424,7 @@
     
 <!-- 内容 -->
 <div class="spiritList">
-    <!-- <ul>
-        <li>
-        <img class="lazy" data-original="http://img07.jiuxian.com/2016/0901/e3160f2d3f0f4e6da7f1c3d696b82f4f2.jpg" alt="">
-        <p>
-            <img class="lazy" data-original="http://misc.jiuxian.com/images/zhenxuan.jpg" alt="">
-            54°董酒尊享封藏大坛1500ml</p>
-        <p style="color:red">￥528.00</p>
-        </li>
-        <li>
-            <img class="lazy" data-original="http://img07.jiuxian.com/2019/1218/d00d5cceb4c747ea9091808882cb94b82.jpg" alt="">
-            <p>
-          
-                54°董酒尊享封藏大坛1500ml</p>
-            <p style="color:red">￥528.00</p>
-            </li>
-            <li>
-                <img class="lazy" data-original="http://img07.jiuxian.com/2020/0316/2be073a2e7ad4031ad1f298e9214e2ea2.jpg" alt="">
-                <p>
-              
-                    54°董酒尊享封藏大坛1500ml</p>
-                <p style="color:red">￥528.00</p>
-                </li>
-                <li>
-                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1122/eba41a9192db4869a12eacc244dda20f2.jpg" alt="">
-                    <p>
-                  
-                        54°董酒尊享封藏大坛1500ml</p>
-                    <p style="color:red">￥528.00</p>
-                    </li>
-                    <li>
-                        <img class="lazy" data-original="http://img07.jiuxian.com/2020/0425/ed975ad0b3dd49028f1e3702d00f3aaf2.jpg" alt="">
-                        <p>
-                      
-                            54°董酒尊享封藏大坛1500ml</p>
-                        <p style="color:red">￥528.00</p>
-                        </li>
-                        <li>
-                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0731/41f8afccc3384c689f12948c02dce5e12.jpg" alt="">
-                            <p>
-                          
-                                54°董酒尊享封藏大坛1500ml</p>
-                            <p style="color:red">￥528.00</p>
-                            </li>
-                            <li>
-                                <img class="lazy" data-original="http://img07.jiuxian.com/2018/1107/8e2e5619b1e84fcd800db0aa7e8dd7c12.jpg" alt="">
-                                <p>
-                              
-                                    54°董酒尊享封藏大坛1500ml</p>
-                                <p style="color:red">￥528.00</p>
-                                </li>
-                                <li>
-                                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1129/14b28d5d0b6643d8bf479279b7dc9e102.jpg" alt="">
-                                    <p>
-                                  
-                                        54°董酒尊享封藏大坛1500ml</p>
-                                    <p style="color:red">￥528.00</p>
-                                    </li>
-                                    <li>
-                                        <img class="lazy" data-original="http://img07.jiuxian.com/2019/0906/788f8128d60b42a9bdad28698a635a962.jpg" alt="">
-                                        <p>
-                                      
-                                            54°董酒尊享封藏大坛1500ml</p>
-                                        <p style="color:red">￥528.00</p>
-                                        </li>
-                                        <li>
-                                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0424/a74c29f8f25b4fcd954db418428754cd2.jpg" alt="">
-                                            <p>
-                                          
-                                                54°董酒尊享封藏大坛1500ml</p>
-                                            <p style="color:red">￥528.00</p>
-                                            </li>
-    </ul> -->
+  
 
 </div>
 <!--  -->
@@ -1149,78 +460,7 @@
     
 <!-- 内容 -->
 <div class="spiritList">
-    <!-- <ul>
-        <li>
-        <img class="lazy" data-original="http://img07.jiuxian.com/2016/0901/e3160f2d3f0f4e6da7f1c3d696b82f4f2.jpg" alt="">
-        <p>
-            <img class="lazy" data-original="http://misc.jiuxian.com/images/zhenxuan.jpg" alt="">
-            54°董酒尊享封藏大坛1500ml</p>
-        <p style="color:red">￥528.00</p>
-        </li>
-        <li>
-            <img class="lazy" data-original="http://img07.jiuxian.com/2019/1218/d00d5cceb4c747ea9091808882cb94b82.jpg" alt="">
-            <p>
-          
-                54°董酒尊享封藏大坛1500ml</p>
-            <p style="color:red">￥528.00</p>
-            </li>
-            <li>
-                <img class="lazy" data-original="http://img07.jiuxian.com/2020/0316/2be073a2e7ad4031ad1f298e9214e2ea2.jpg" alt="">
-                <p>
-              
-                    54°董酒尊享封藏大坛1500ml</p>
-                <p style="color:red">￥528.00</p>
-                </li>
-                <li>
-                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1122/eba41a9192db4869a12eacc244dda20f2.jpg" alt="">
-                    <p>
-                  
-                        54°董酒尊享封藏大坛1500ml</p>
-                    <p style="color:red">￥528.00</p>
-                    </li>
-                    <li>
-                        <img class="lazy" data-original="http://img07.jiuxian.com/2020/0425/ed975ad0b3dd49028f1e3702d00f3aaf2.jpg" alt="">
-                        <p>
-                      
-                            54°董酒尊享封藏大坛1500ml</p>
-                        <p style="color:red">￥528.00</p>
-                        </li>
-                        <li>
-                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0731/41f8afccc3384c689f12948c02dce5e12.jpg" alt="">
-                            <p>
-                          
-                                54°董酒尊享封藏大坛1500ml</p>
-                            <p style="color:red">￥528.00</p>
-                            </li>
-                            <li>
-                                <img class="lazy" data-original="http://img07.jiuxian.com/2018/1107/8e2e5619b1e84fcd800db0aa7e8dd7c12.jpg" alt="">
-                                <p>
-                              
-                                    54°董酒尊享封藏大坛1500ml</p>
-                                <p style="color:red">￥528.00</p>
-                                </li>
-                                <li>
-                                    <img class="lazy" data-original="http://img07.jiuxian.com/2019/1129/14b28d5d0b6643d8bf479279b7dc9e102.jpg" alt="">
-                                    <p>
-                                  
-                                        54°董酒尊享封藏大坛1500ml</p>
-                                    <p style="color:red">￥528.00</p>
-                                    </li>
-                                    <li>
-                                        <img class="lazy" data-original="http://img07.jiuxian.com/2019/0906/788f8128d60b42a9bdad28698a635a962.jpg" alt="">
-                                        <p>
-                                      
-                                            54°董酒尊享封藏大坛1500ml</p>
-                                        <p style="color:red">￥528.00</p>
-                                        </li>
-                                        <li>
-                                            <img class="lazy" data-original="http://img07.jiuxian.com/2018/0424/a74c29f8f25b4fcd954db418428754cd2.jpg" alt="">
-                                            <p>
-                                          
-                                                54°董酒尊享封藏大坛1500ml</p>
-                                            <p style="color:red">￥528.00</p>
-                                            </li>
-    </ul> -->
+  
 
 </div>
 <!--  -->
@@ -1231,124 +471,17 @@
 </div>
 </div>
 <!-- footer -->
-<footer>
-<div class="footerTopBox">
-    <div class="footerTop">
-        <div class="footerContact">
-            <i class="publicIcon"></i>
-            <b>400-617-9999</b>
-            <span>客服热线
-                <span>9:00-23:00</span>
-                <span>贴心服务</span>
-            </span>
-        </div>
-        <div class="footerTopRight">
-            <div class="ftRight-tit">优惠促销早知道</div>
-            <div class="ftRight-form">
-                <input type="text">
-                <span>请输入您的邮箱地址</span>
-                <i class="publicIcon"></i>
-            </div>
-        </div>
-    </div>
-    <div class="footerServices">
-        <ul>
-           
-            <li>
-                <h3>
-                    <i class="publicIcon"></i>
-                    <span>新手入门</span>
-                </h3>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-            </li>
-            <li>
-                <h3>
-                    <i class="publicIcon"></i>
-                    <span>新手入门</span>
-                </h3>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-            </li>
-            <li>
-                <h3>
-                    <i class="publicIcon"></i>
-                    <span>新手入门</span>
-                </h3>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-            </li>
-            <li>
-                <h3>
-                    <i class="publicIcon"></i>
-                    <span>新手入门</span>
-                </h3>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-            </li>
-            <li>
-                <h3>
-                    <i class="publicIcon"></i>
-                    <span>新手入门</span>
-                </h3>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-            </li>
-            <li>
-                <h3>
-                    <i class="publicIcon"></i>
-                    <span>新手入门</span>
-                </h3>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-                <p>
-                    购物保障
-                </p>
-            </li>
-        </ul>
-    </div>
+<div class="footer1" style="width: 100%; height: 300px;">
 
 </div>
-</footer>
+<script>
+// 引入footer
+
+
+$(function(){
+       $(".footer1").load("footer.html");
+   })
+</script>
 <!-- footer  -->
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
@@ -1356,126 +489,56 @@
 <script src="script/tab.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
 <script src="thirdplugins/jquery.lazyload.js"></script>
-<script src="script/localstorage.js"></script>
-<script src="script/tabfz.js"></script>
-<script src="">
-    new Tab({
-        type: 'fdsaf',
-            autoplay: true,
-            invoke: 2
-    })
-    
-</script>
-        
+<script src="script/lbt.js"></script>
+   
 <script>
-    !function(){
-        var swiper = new Swiper('.swiper-container', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    
-    });
-    }()
-
-!function(){
-    var mySwiper = new Swiper('.swiper-container2', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-}()
-    
-!function(){
-        var swiper = new Swiper('.bannerSlier', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    
-    });
-    }()
-    //5.楼梯效果
+  //5.楼梯效果
 !(function($){
-  const $loutinav = $('#loutinav');
-  const $louti = $('#loutinav li');
-  const $louceng = $('.F1');
-  function scroll(){
-    let $top=$(window).scrollTop();
-    $top>=1700?$loutinav.show():$loutinav.hide();
-    $(window).on('scroll',function(){
-        let $top=$(window).scrollTop();
-        $top >= 1700 ? $loutinav.show() : $loutinav.hide();
-        $louceng.each(function(index,element){
-            $loucengtop = $(this).offset().top + $(element).height() / 2;
-            if($loucengtop>$top){
-                $louti.removeClass('active2');
-                 $louti.eq(index).addClass('active2');
-                 return false;
+const $loutinav = $('#loutinav');
+const $louti = $('#loutinav li');
+const $louceng = $('.F1');
+function scroll(){
+let $top=$(window).scrollTop();
+$top>=1700?$loutinav.show():$loutinav.hide();
+$(window).on('scroll',function(){
+   let $top=$(window).scrollTop();
+   $top >= 1700 ? $loutinav.show() : $loutinav.hide();
+   $louceng.each(function(index,element){
+       $loucengtop = $(this).offset().top + $(element).height() / 2;
+       if($loucengtop>$top){
+           $louti.removeClass('active2');
+            $louti.eq(index).addClass('active2');
+            return false;
 
-            }
-        })
-    })
+       }
+   })
+})
 
-  }
-  scroll()
-  $louti.not('.last').on('click',function(){
-    $(window).off('scroll');
-    $(this).addClass('active2').siblings('li').removeClass('active2');
-    let $loucengtop = $louceng.eq($(this).index()).offset().top;
-    $('html,body').animate({
-        scrollTop:$loucengtop
-    },function(){
-        $(window).on('scroll',function(){
-            scroll()
-        })
-    }) 
-  })
-            //3.回到顶部
-            $('.last').on('click', function() {
-                $('html,body').animate({
-                    scrollTop: 0
-                });
-            })
+}
+scroll()
+$louti.not('.last').on('click',function(){
+$(window).off('scroll');
+$(this).addClass('active2').siblings('li').removeClass('active2');
+let $loucengtop = $louceng.eq($(this).index()).offset().top;
+$('html,body').animate({
+   scrollTop:$loucengtop
+},function(){
+   $(window).on('scroll',function(){
+       scroll()
+   })
+}) 
+})
+       //3.回到顶部
+       $('.last').on('click', function() {
+           $('html,body').animate({
+               scrollTop: 0
+           });
+       })
 
 
 
 }(jQuery))
-
-//顶部悬浮
-! function($) {
-            //获取滚动条，进行判断是否显示悬浮框
-            $(window).on('scroll', function() {
-                let $top = $(window).scrollTop(); //获取匹配元素相对滚动条顶部的偏移
-                const $box = $('.header');
-            
-                if ($top >= 800) {
-                    $box.stop(true).animate({
-                        top: 0
-                    });
-                } else {
-                    $box.stop(true).animate({
-                        top: -60
-                    });
-                }
-            });
-        }(jQuery);
-
-  </script>
- 
+</script>
 
  
 </html>
