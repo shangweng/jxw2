@@ -6,113 +6,111 @@
         $.ajax({
             url: 'http://10.31.162.68/hdf_jxwproject/php/alldata.php',
             dataType: 'json'
-        }).done(function(data) {
-            $.each(data, function(index, value) {
-                if (goods_id == value.goods_id) {
-                    let $clonebox = $('.goods-item:hidden').clone(true, true); //克隆隐藏元素
-                    $clonebox.find('.goods-pic').find('img').attr('src', value.goods_small_logo);
-                    $clonebox.find('.goods-pic').find('img').attr('goods_id', value.goods_id);
-                    $clonebox.find('.goods-d-info').find('a').html(value.goods_name);
-                    $clonebox.find('.b-price').find('strong').html(value.goods_price);
-                    $clonebox.find('.quantity-form').find('input').val(num);
-                    //计算单个商品的价格
-                    $clonebox.find('.b-sum').find('strong').html((value.goods_price * num).toFixed(2));
+        }).done(function(data) {    
+          
+             $.each(data, function(index, value) { 
+                if (goods_id == value.goods_id) {      
+                    let $clonebox = $('.cartList:hidden').clone(true, true); //克隆隐藏元素
+                     $clonebox.find('.cartImg').find('img').attr('src', value.goods_small_logo);
+                     $clonebox.find('.cartImg').find('img').attr('goods_id', value.goods_id);
+                     $clonebox.find('.goodsRight').find('span').html(value.goods_name);
+                     $clonebox.find('.cartPrice').find('span').html(value.goods_price);
+                     $clonebox.find('.cartNum').find('input').val(num);
+                    $clonebox.find('.cartJs').find('span').html((value.goods_price * num).toFixed(2));
                     $clonebox.css('display', 'block');
-                    $('.item-list').append($clonebox);
-                    calcprice(); //计算总价
+                    $('.cartWrap').append($clonebox);
+                    jsallprice(); //计算总价
                 }
             });
+          
 
         });
     }
 
     //2.获取cookie渲染数据
     if ($.cookie('cookiesid') && $.cookie('cookienum')) {
-
         let s =$.cookie('cookiesid').split(',') ; //获取cookie 同时转换成数组[1,2]
-        let n = $.cookie('cookienum').split(','); //获取cookie 同时转换成数组[10,20]
-    
+        let n = $.cookie('cookienum').split(','); //获取cookie 同时转换成数组[10,20] 
         $.each(s, function(index, value) {
             showlist(s[index], n[index]);
+        
         });
-    }
-    
-    //3.计算总价--使用次数很多--函数封装
-    function calcprice() {
+    }  
+    //3.计算总价
+    function jsallprice() {
         let $sum = 0; //商品的件数
         let $count = 0; //商品的总价
-        $('.goods-item:visible').each(function(index, ele) {
+        $('.cartList:visible').each(function(index, ele) {
             if ($(ele).find('.cart-checkbox input').prop('checked')) { //复选框勾选
-                $sum += parseInt($(ele).find('.quantity-form input').val());
-                $count += parseFloat($(ele).find('.b-sum strong').html());
+                $sum += parseInt($(ele).find('.cartNum input').val());
+                $count += parseFloat($(ele).find('.cartJs span').html());
             }
         });
-        $('.amount-sum').find('em').html($sum);
+        $('.checkShop').find('em').html($sum);
         $('.totalprice').html($count.toFixed(2));
     }
 
     //4.全选
-    $('.allsel').on('change', function() {
-        $('.goods-item:visible').find(':checkbox').prop('checked', $(this).prop('checked'));
+    $('.allsel').on('click', function() {
+        $('.cartList:visible').find(':checkbox').prop('checked', $(this).prop('checked'));
         $('.allsel').prop('checked', $(this).prop('checked'));
-        calcprice(); //计算总价
+        jsallprice(); //计算总价
     });
-    let $inputs = $('.goods-item:visible').find(':checkbox');
-    $('.item-list').on('change', $inputs, function() {
-        //$(this):被委托的元素，checkbox
-        if ($('.goods-item:visible').find(':checkbox').length === $('.goods-item:visible').find('input:checked').size()) {
+    let $inputs = $('.cartList:visible').find(':checkbox');
+    $('.cartList').on('click', $inputs, function() {
+        if ($('.cartList:visible').find(':checkbox').length === $('.cartList:visible').find('input:checked').size()) {
             $('.allsel').prop('checked', true);
         } else {
             $('.allsel').prop('checked', false);
         }
-        calcprice(); //计算总价
+        jsallprice(); //计算总价
     });
 
-    //5.数量的改变
-    $('.quantity-add').on('click', function() {
-        let $num = $(this).parents('.goods-item').find('.quantity-form input').val();
+    // //5.数量的改变
+    $('.add').on('click', function() {
+        let $num = $(this).parents('.cartList').find('.cartNum input').val();
         $num++;
-        $(this).parents('.goods-item').find('.quantity-form input').val($num);
+        $(this).parents('.cartList').find('.cartNum input').val($num);
 
-        $(this).parents('.goods-item').find('.b-sum strong').html(calcsingleprice($(this)));
-        calcprice(); //计算总价
+        $(this).parents('.cartList').find('.cartJs span').html(jsprice($(this)));
+        jsallprice(); //计算总价
         setcookie($(this));
     });
 
 
-    $('.quantity-down').on('click', function() {
-        let $num = $(this).parents('.goods-item').find('.quantity-form input').val();
+    $('.minus').on('click', function() {
+        let $num = $(this).parents('.cartList').find('.cartNum input').val();
         $num--;
         if ($num < 1) {
             $num = 1;
         }
-        $(this).parents('.goods-item').find('.quantity-form input').val($num);
-        $(this).parents('.goods-item').find('.b-sum strong').html(calcsingleprice($(this)));
-        calcprice(); //计算总价
+        $(this).parents('.cartList').find('.cartNum input').val($num);
+        $(this).parents('.cartList').find('.cartJs span').html(jsprice($(this)));
+        jsallprice(); //计算总价
         setcookie($(this));
     });
 
 
-    $('.quantity-form input').on('input', function() {
+    $('.cartNum input').on('input', function() {
         let $reg = /^\d+$/g; //只能输入数字
         let $value = $(this).val();
         if (!$reg.test($value)) { //不是数字
             $(this).val(1);
         }
-        $(this).parents('.goods-item').find('.b-sum strong').html(calcsingleprice($(this)));
-        calcprice(); //计算总价
+        $(this).parents('.cartList').find('.cartJs span').html(jsprice($(this)));
+        jsallprice(); //计算总价
         setcookie($(this));
     });
 
-    //计算单价
-    function calcsingleprice(obj) { //obj元素对象
-        let $dj = parseFloat(obj.parents('.goods-item').find('.b-price strong').html());
-        let $num = parseInt(obj.parents('.goods-item').find('.quantity-form input').val());
-        return ($dj * $num).toFixed(2)
-    }
+     //计算单价
+     function jsprice(obj) { //obj元素对象
+         let $dj = parseFloat(obj.parents('.cartList').find('.cartPrice span').html());
+         let $num = parseInt(obj.parents('.cartList').find('.cartNum input').val());
+         return ($dj * $num).toFixed(2)
+     }
 
 
-    //将改变后的数量存放到cookie中
+     //将改变后的数量存放到cookie中
     let arrsid = []; //存储商品的编号。
     let arrnum = []; //存储商品的数量。
     function cookietoarray() {
@@ -127,9 +125,9 @@
 
     function setcookie(obj) {
         cookietoarray();
-        let $goods_id = obj.parents('.goods-item').find('img').attr('goods_id');
-        arrnum[$.inArray($goods_id, arrsid)] = obj.parents('.goods-item').find('.quantity-form input').val();
-        document.cookie('cookienum', arrnum, 10);
+        let $goods_id = obj.parents('.cartList').find('img').attr('goods_id');
+        arrnum[$.inArray($goods_id, arrsid)] = obj.parents('.cartList').find('.cartNum input').val();
+        $.cookie('cookienum', arrnum, {expires:10});
     }
 
 
@@ -147,25 +145,25 @@
         $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
         $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
     }
-    $('.b-action a').on('click', function() {
+    $('.Del').on('click', function() {
         cookietoarray();
         if (window.confirm('你确定要删除吗?')) {
-            $(this).parents('.goods-item').remove();
-            delcookie($(this).parents('.goods-item').find('img').attr('goods_id'), arrsid);
-            calcprice(); //计算总价
+            $(this).parents('.cartList').remove();
+            delcookie($(this).parents('.cartList').find('img').attr('goods_id'), arrsid);
+            jsallprice(); //计算总价
         }
     });
 
-    $('.operation a').on('click', function() {
+    $('.delOperation').on('click', function() {
         cookietoarray();
         if (window.confirm('你确定要全部删除吗?')) {
-            $('.goods-item:visible').each(function() {
+            $('.cartList:visible').each(function() {
                 if ($(this).find(':checkbox').is(':checked')) { //判断复选框是否选中
                     $(this).remove();
                     delcookie($(this).find('img').attr('goods_id'), arrsid);
                 }
             });
-            calcprice(); //计算总价
+            jsallprice(); //计算总价
         }
     });
 }(jQuery);

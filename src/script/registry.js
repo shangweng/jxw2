@@ -54,19 +54,57 @@
     })
   
          //密码验证
+
+         $("#passWordInput").on('input',function(){
+            let $pass= $(this).val()
+             if($pass.length>=8 && $pass.length<=14){
+                 let regnum=/\d/;
+                 let regupper=/[A-Z]/;
+                 let reglower=/[a-z]/;
+                 let regother=/\W/;
+
+                 let $count=0;
+                 if(regnum.test($pass)){
+                     $count++;
+
+                 }
+                 if(regupper.test($pass)){
+                    $count++;
+                    
+                }
+                if(reglower.test($pass)){
+                    $count++;
+                    
+                }
+                if(regother.test($pass)){
+                    $count++;
+                    
+                }
+            switch($count){
+                case 1:
+                    $(".setPossWord").html("<b><font color='red'>弱~~!</font><b/>");
+                    break;
+                case 2:    
+                case 3:  $(".setPossWord").html("<b><font color='yellow'>中~~!</font><b/>");
+                break;
+                case 4:  $(".setPossWord").html("<b><font color='green'>强~~!</font><b/>");
+                break;
+            }
+             }else{
+                $(".setPossWord").html("<b><font color='red'>密码格式不正确~~!</font><b/>");
+
+             }
+
+         })
+
          $("#passWordInput").blur(function(){
             var Password = $(this).val();
             if(Password== ""){
                 $(".setPossWord").html("<b><font color='red'>密码不能为空~~!</font><b/>");
-            }else{
-                if(Password.length<6 || Password.length>20){
-                    $(".setPossWord").html("<b><font color='red'>密码格式不正确~~!</font><b/>");
-                }else{
-                    $(".setPossWord").html("<b><font color='green'>密码验证通过~~!</font><b/>");
-           
-                }
-            }
+            }   
         });
+      
+        
 
           //确认密码验证
           $("#txtRepeatPass").blur(function(){
