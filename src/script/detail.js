@@ -66,13 +66,14 @@
 
 
     $('.p-btn a').on('click', function() {
-
+        console.log(1)
         //获取当前商品对应的sid
         let $sid = $(this).parents('.goodsinfo').find('#smallpic').attr('goods_id');
         //判断是第一次点击还是多次点击
         //多次点击
         //$.inArray(value,array,[fromIndex])
         //确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
+        cookietoarray();
         if ($.inArray($goods_id, arrsid) != -1) { //$sid存在，商品列表存在，数量累加
             //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
             let $num = parseInt(arrnum[$.inArray($goods_id, arrsid)]) + parseInt($('#count').val()); //取值
