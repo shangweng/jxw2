@@ -58,25 +58,27 @@
          $("#passWordInput").on('input',function(){
             let $pass= $(this).val()
              if($pass.length>=8 && $pass.length<=14){
-                 let regnum=/\d/;
-                 let regupper=/[A-Z]/;
-                 let reglower=/[a-z]/;
-                 let regother=/\W/;
+                 let $regnum=/\d/;
+                 let $regupper=/[A-Z]/;
+                 let $reglower=/[a-z]/;
+                 let $regother=  /[`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘'，。、]/im; 
+                 ;
+                
 
                  let $count=0;
-                 if(regnum.test($pass)){
+                 if($regnum.test($pass)){
                      $count++;
 
                  }
-                 if(regupper.test($pass)){
+                 if($regupper.test($pass)){
                     $count++;
                     
                 }
-                if(reglower.test($pass)){
+                if($reglower.test($pass)){
                     $count++;
                     
                 }
-                if(regother.test($pass)){
+                if($regother.test($pass)){
                     $count++;
                     
                 }
@@ -98,8 +100,8 @@
          })
 
          $("#passWordInput").blur(function(){
-            var Password = $(this).val();
-            if(Password== ""){
+            var $Password= $(this).val();
+            if($Password== ""){
                 $(".setPossWord").html("<b><font color='red'>密码不能为空~~!</font><b/>");
             }   
         });
@@ -108,16 +110,16 @@
 
           //确认密码验证
           $("#txtRepeatPass").blur(function(){
-            var passwprd = $("#passWordInput").val();
+            var $passwprd = $("#passWordInput").val();
             //alert(passwprd);
-            var RepeatPass = $(this).val();
+            var $RepeatPass = $(this).val();
            
-            if(RepeatPass== ""){
+            if($RepeatPass== ""){
               
                 $(".RepeatPassMsg").html("<b><font color='red'>密码不能为空~~!</font><b/>");
              
             }else{
-                if(RepeatPass == passwprd){
+                if($RepeatPass == $passwprd){
                     $(".RepeatPassMsg").html("<b><font color='green'>密码验证通过~~!</font><b/>");
               
                 }else{
@@ -129,15 +131,15 @@
          //邮箱验证
  
          $("#txtEmail").blur(function(){
-             console.log(1)
+        
             //$("#name").val().length
-            var Email = $(this).val();
+            var $Email = $(this).val();
            
-            if(Email== ""){
+            if($Email== ""){
                 $("#EmailMsg").html("<b><font color='red'>邮箱不能为空~~!</font><b/>");
             }else{
-                var regEmail = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
-                if(regEmail.test(Email)){
+                var $regEmail = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+                if($regEmail.test($Email)){
                     $("#EmailMsg").html("<b><font color='green'>邮箱验证通过~~!</font><b/>");
                  
                 }else{

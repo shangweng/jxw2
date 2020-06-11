@@ -10,7 +10,10 @@
         }).done(function (result) {
             if (result) {
                 location.href = "index.html";
-                localStorage.setItem('username', $('.username').val());
+             
+                    localStorage.setItem('username', $('.username').val());
+                
+              
 
             } else {
                 $('.password').val('');
