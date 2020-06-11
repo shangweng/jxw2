@@ -26,10 +26,11 @@
         //二级菜单显示隐藏
         const $hdli=$('.firstU>li');
         $hdli.on('mouseover',function(){
-        
+            $(this).css({ "color": "#ff0011", "background": "#fff" });
          $(this).children(".jiuxianBox").show(); 
         })
         $hdli.on('mouseout',function(){
+            $(this).css({ "color": "#ff0011", "background": "#f2f2f2" });
           $(this).children(".jiuxianBox").hide(); })
         
         

@@ -59,7 +59,7 @@ body{
     padding: 0 5px;
     position: relative;
     .jiuxianBox2{
-        width: 200px !important;
+
         .p1{
             display: flex;
             justify-content: space-around;
@@ -71,6 +71,7 @@ body{
 
     }
     .jiuxianBox{
+
         border: 1px solid #e5e5e5;
     border-top: 0;
     position: absolute;
@@ -78,7 +79,7 @@ body{
     left: -1px;
     z-index: 206;
     background: #fff;
-    padding: 5px 0;
+    padding: 5px 5px;
     display: none;
     p{
  
